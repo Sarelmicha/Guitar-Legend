@@ -1,24 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Login Controller" customClass="ViewController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="oQ2-qW-6gA">
+                                <rect key="frame" x="107" y="173" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="2CV-0i-sbq"/>
+                                    <constraint firstAttribute="width" constant="200" id="AJN-O4-XGg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guitar Legend" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoH-tv-wMq">
+                                <rect key="frame" x="56" y="323" width="302.5" height="70"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yU2-XC-k7j">
+                                <rect key="frame" x="67" y="423" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Email"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="B63-Kx-d5Y"/>
+                                    <constraint firstAttribute="width" constant="280" id="DEu-0f-m3s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUm-b8-6ep">
+                                <rect key="frame" x="67" y="493" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Email"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Lfi-Px-DfV"/>
+                                    <constraint firstAttribute="height" constant="50" id="iVZ-2J-155"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQc-yR-23N">
+                                <rect key="frame" x="158" y="583" width="98" height="64"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYd-cN-0y8">
+                                <rect key="frame" x="81.5" y="777" width="251" height="35"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Don't have an account? Sign up!">
+                                    <color key="titleColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="GQc-yR-23N" firstAttribute="top" secondItem="NUm-b8-6ep" secondAttribute="bottom" constant="40" id="0Xa-2q-952"/>
+                            <constraint firstItem="NUm-b8-6ep" firstAttribute="top" secondItem="yU2-XC-k7j" secondAttribute="bottom" constant="20" id="6rl-1e-pCe"/>
+                            <constraint firstItem="WoH-tv-wMq" firstAttribute="top" secondItem="oQ2-qW-6gA" secondAttribute="bottom" id="6zp-dv-rYs"/>
+                            <constraint firstItem="NUm-b8-6ep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AQp-QD-AiQ"/>
+                            <constraint firstItem="yU2-XC-k7j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DCy-kC-7WE"/>
+                            <constraint firstItem="GQc-yR-23N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GBq-ng-TXu"/>
+                            <constraint firstItem="yU2-XC-k7j" firstAttribute="top" secondItem="WoH-tv-wMq" secondAttribute="bottom" constant="30" id="aAg-pt-PKh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EYd-cN-0y8" secondAttribute="bottom" constant="50" id="dW0-CR-78t"/>
+                            <constraint firstItem="oQ2-qW-6gA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o0V-c2-LdH"/>
+                            <constraint firstItem="yU2-XC-k7j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qhN-mY-4xF"/>
+                            <constraint firstItem="WoH-tv-wMq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ssz-LY-bcK"/>
+                            <constraint firstItem="EYd-cN-0y8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yw3-7K-tOe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="640" height="360"/>
+    </resources>
 </document>
