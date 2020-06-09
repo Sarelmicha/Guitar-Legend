@@ -54,14 +54,14 @@
                                 <rect key="frame" x="158" y="583" width="98" height="64"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYd-cN-0y8">
                                 <rect key="frame" x="81.5" y="777" width="251" height="35"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <state key="normal" title="Don't have an account? Sign up!">
-                                    <color key="titleColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                         </subviews>
@@ -82,10 +82,93 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="Yu6-0F-iQZ" kind="presentation" identifier="goToSignUpPage" modalPresentationStyle="fullScreen" id="gI4-sY-5gq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JqD-Ux-Zy1">
+            <objects>
+                <viewController id="Yu6-0F-iQZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iFP-FB-drZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dTg-7l-3i0">
+                                <rect key="frame" x="107" y="143" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="UqU-sl-96V"/>
+                                    <constraint firstAttribute="width" constant="200" id="zDL-hF-7Qw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUk-oZ-fck">
+                                <rect key="frame" x="102.5" y="293" width="209" height="65"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAw-mW-MK8">
+                                <rect key="frame" x="81.5" y="368" width="251" height="35"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="It's free and only takes a minute!">
+                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9b-Xh-c3R">
+                                <rect key="frame" x="67" y="423" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Email"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6n1-zE-qci"/>
+                                    <constraint firstAttribute="width" constant="280" id="O4D-xt-9VQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sJw-7Y-nJG">
+                                <rect key="frame" x="67" y="493" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" hint="Email"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2V2-cl-szC"/>
+                                    <constraint firstAttribute="width" constant="280" id="VwC-KQ-MO0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qat-85-DY3">
+                                <rect key="frame" x="112" y="603" width="190" height="63"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="40"/>
+                                <state key="normal" title="Let's Rock!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dTg-7l-3i0" firstAttribute="centerX" secondItem="iFP-FB-drZ" secondAttribute="centerX" id="1gv-ih-kQR"/>
+                            <constraint firstItem="Qat-85-DY3" firstAttribute="centerX" secondItem="iFP-FB-drZ" secondAttribute="centerX" id="57h-uj-Ol3"/>
+                            <constraint firstItem="Qat-85-DY3" firstAttribute="top" secondItem="sJw-7Y-nJG" secondAttribute="bottom" constant="60" id="5D2-Ug-1V4"/>
+                            <constraint firstItem="CUk-oZ-fck" firstAttribute="top" secondItem="dTg-7l-3i0" secondAttribute="bottom" id="7ME-X5-OQk"/>
+                            <constraint firstItem="x9b-Xh-c3R" firstAttribute="top" secondItem="BAw-mW-MK8" secondAttribute="bottom" constant="20" id="Cl5-f7-DdN"/>
+                            <constraint firstItem="x9b-Xh-c3R" firstAttribute="centerX" secondItem="iFP-FB-drZ" secondAttribute="centerX" id="Kez-0k-bVU"/>
+                            <constraint firstItem="CUk-oZ-fck" firstAttribute="centerX" secondItem="iFP-FB-drZ" secondAttribute="centerX" id="Zb4-6r-rNQ"/>
+                            <constraint firstItem="sJw-7Y-nJG" firstAttribute="top" secondItem="x9b-Xh-c3R" secondAttribute="bottom" constant="20" id="eSb-mO-THw"/>
+                            <constraint firstItem="x9b-Xh-c3R" firstAttribute="centerY" secondItem="iFP-FB-drZ" secondAttribute="centerY" id="i3I-ka-nXk"/>
+                            <constraint firstItem="sJw-7Y-nJG" firstAttribute="centerX" secondItem="iFP-FB-drZ" secondAttribute="centerX" id="koh-JE-NnI"/>
+                            <constraint firstItem="BAw-mW-MK8" firstAttribute="top" secondItem="CUk-oZ-fck" secondAttribute="bottom" constant="10" id="oEw-iG-zSL"/>
+                            <constraint firstItem="BAw-mW-MK8" firstAttribute="centerX" secondItem="iFP-FB-drZ" secondAttribute="centerX" id="pXi-fL-qtJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8VC-5e-Jfr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fjo-jG-HF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="859"/>
         </scene>
     </scenes>
     <resources>
