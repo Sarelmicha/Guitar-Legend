@@ -138,6 +138,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Nc-p0-F7E"/>
                     </view>
+                    <connections>
+                        <segue destination="9CG-UW-oXg" kind="presentation" identifier="goToLessonPage" modalPresentationStyle="fullScreen" id="Scn-6W-WES"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bt-jP-o6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -152,16 +155,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hfd-SO-v7Z" userLabel="Header">
-                                <rect key="frame" x="90.5" y="94" width="233.5" height="80"/>
+                                <rect key="frame" x="62" y="94" width="290" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LESSON 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIF-1s-0vG">
-                                        <rect key="frame" x="0.0" y="18.5" width="153.5" height="43.5"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                        <rect key="frame" x="0.0" y="14" width="210" height="52"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bGP-nh-ezg">
-                                        <rect key="frame" x="153.5" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="210" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="I8L-lx-Kw3"/>
                                             <constraint firstAttribute="width" constant="80" id="TWh-oe-6Te"/>
@@ -170,43 +173,43 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHORDS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-8j-NLi">
-                                <rect key="frame" x="160.5" y="184" width="93.5" height="33"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <rect key="frame" x="143" y="184" width="128" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpv-1A-8CP" userLabel="Chords Holder">
-                                <rect key="frame" x="32" y="227" width="350" height="100"/>
+                                <rect key="frame" x="32" y="233" width="350" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="OxI-hN-vbN"/>
                                     <constraint firstAttribute="width" constant="350" id="Pef-bi-Cqe"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o3P-qh-8X8" userLabel="Challenge Header">
-                                <rect key="frame" x="92" y="352" width="230" height="75"/>
+                                <rect key="frame" x="43.5" y="358" width="327.5" height="85"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LESSON CHALLENGE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1G-dH-RMU">
-                                        <rect key="frame" x="0.0" y="0.0" width="230" height="33"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="327.5" height="39"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IM YOURS by JASON MARS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHZ-OJ-LGf">
-                                        <rect key="frame" x="0.0" y="53" width="230" height="22"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="59" width="327.5" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music-file" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-gY-EjG">
-                                <rect key="frame" x="175" y="457" width="64" height="100"/>
+                                <rect key="frame" x="175" y="473" width="64" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="kNh-We-0n4"/>
                                 </constraints>
                             </imageView>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oj-G5-ubM">
-                                <rect key="frame" x="92" y="577" width="230" height="150"/>
+                                <rect key="frame" x="43.5" y="593" width="327.5" height="150"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="sU3-H0-OcJ"/>
@@ -225,7 +228,7 @@
                                 <state key="normal" backgroundImage="left-arrow"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-5q-ZHJ">
-                                <rect key="frame" x="55" y="767" width="304" height="34"/>
+                                <rect key="frame" x="55" y="783" width="304" height="34"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <state key="normal" title="I'M READY FOR MY NEXT CHALLENGE!">
                                     <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -254,6 +257,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pnm-Mu-J96"/>
                     </view>
+                    <connections>
+                        <segue destination="shi-cQ-BPY" kind="presentation" identifier="goToChordPage" modalPresentationStyle="fullScreen" id="n34-GA-cPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYo-GP-WB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,16 +275,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oaU-ei-EzI" userLabel="Header">
-                                <rect key="frame" x="101" y="94" width="212.5" height="100"/>
+                                <rect key="frame" x="68" y="94" width="278.5" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C CHORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAV-Sx-kQl">
-                                        <rect key="frame" x="0.0" y="28.5" width="132.5" height="43.5"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                        <rect key="frame" x="0.0" y="24" width="198.5" height="52"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-du-NxT">
-                                        <rect key="frame" x="132.5" y="10" width="80" height="80"/>
+                                        <rect key="frame" x="198.5" y="10" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="5me-r8-6AT"/>
                                             <constraint firstAttribute="height" constant="80" id="cbc-jN-u71"/>
@@ -424,6 +430,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjo-jG-HF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="859"/>
+        </scene>
+        <!--Settings Controller-->
+        <scene sceneID="vh1-hQ-if5">
+            <objects>
+                <viewController id="ONh-dD-eLP" userLabel="Settings Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qIA-XC-fDr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nEH-n5-S0j" userLabel="Header">
+                                <rect key="frame" x="65" y="104" width="284" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2op-e5-8BL">
+                                        <rect key="frame" x="0.0" y="14" width="204" height="52"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-0R-ITS">
+                                        <rect key="frame" x="204" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="7av-bx-zBS"/>
+                                            <constraint firstAttribute="height" constant="80" id="axf-Y9-Wux"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsH-WM-El2">
+                                <rect key="frame" x="20" y="54" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Lz-15-zNT"/>
+                                    <constraint firstAttribute="width" constant="50" id="GBo-Fs-f5F"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="left-arrow"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SdZ-Rf-NHN">
+                                <rect key="frame" x="111" y="204" width="192" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLu-XM-UNr">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="51"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <state key="normal" title="RESET LEVELS">
+                                            <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwG-yL-VdG">
+                                        <rect key="frame" x="32" y="59" width="128" height="51"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <state key="normal" title="LOGOUT">
+                                            <color key="titleColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gsH-WM-El2" firstAttribute="leading" secondItem="kjl-44-lts" secondAttribute="leading" constant="20" id="9nY-Gg-cp7"/>
+                            <constraint firstItem="nEH-n5-S0j" firstAttribute="centerX" secondItem="qIA-XC-fDr" secondAttribute="centerX" id="Qhd-cD-riV"/>
+                            <constraint firstItem="SdZ-Rf-NHN" firstAttribute="top" secondItem="nEH-n5-S0j" secondAttribute="bottom" constant="20" id="UH1-zZ-hqf"/>
+                            <constraint firstItem="gsH-WM-El2" firstAttribute="top" secondItem="kjl-44-lts" secondAttribute="top" constant="10" id="c6s-he-ZTn"/>
+                            <constraint firstItem="SdZ-Rf-NHN" firstAttribute="centerX" secondItem="qIA-XC-fDr" secondAttribute="centerX" id="nxc-i0-jeL"/>
+                            <constraint firstItem="nEH-n5-S0j" firstAttribute="top" secondItem="gsH-WM-El2" secondAttribute="bottom" id="rSW-eZ-ClA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kjl-44-lts"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8d-um-0sD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="858"/>
         </scene>
     </scenes>
     <resources>
