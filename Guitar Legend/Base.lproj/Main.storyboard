@@ -4,13 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Login Controller" customClass="ViewController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Login Controller" customClass="LoginController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,6 +63,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onLoginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OUQ-pN-fXx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYd-cN-0y8">
                                 <rect key="frame" x="81.5" y="777" width="251" height="35"/>
@@ -87,6 +91,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="GQc-yR-23N" id="8JA-zl-8xG"/>
                         <segue destination="Yu6-0F-iQZ" kind="presentation" identifier="goToSignUpPage" modalPresentationStyle="fullScreen" id="gI4-sY-5gq"/>
                         <segue destination="D9S-5X-eWM" kind="presentation" identifier="goToChallengsPage" modalPresentationStyle="fullScreen" id="Brn-pI-caZ"/>
                     </connections>
@@ -98,13 +103,13 @@
         <!--Challenges Controller-->
         <scene sceneID="Qb3-uG-vSu">
             <objects>
-                <viewController id="D9S-5X-eWM" userLabel="Challenges Controller" sceneMemberID="viewController">
+                <viewController id="D9S-5X-eWM" userLabel="Challenges Controller" customClass="ChallengesController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vIS-fq-7YV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU ARE A LEGEND!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-Ca-Egf">
-                                <rect key="frame" x="50" y="102" width="314" height="50"/>
+                                <rect key="frame" x="50" y="99" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UNb-Ad-had"/>
                                 </constraints>
@@ -112,34 +117,71 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B6V-2t-p6H">
-                                <rect key="frame" x="47" y="182" width="320" height="650"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="4sC-vD-o1K"/>
-                                    <constraint firstAttribute="height" constant="650" id="zFj-bV-WOB"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fck-aZ-1eC">
                                 <rect key="frame" x="20" y="54" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="eOy-45-uAC"/>
                                     <constraint firstAttribute="width" constant="40" id="i0B-Ar-aK2"/>
                                 </constraints>
-                                <state key="normal" title="Settings" backgroundImage="settings"/>
+                                <state key="normal" backgroundImage="settings"/>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BbN-sT-6Pl">
+                                <rect key="frame" x="0.0" y="159" width="414" height="703"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rB7-ca-dJw">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChallengeCell" id="gMb-Ov-cOc" customClass="ChallengeCollectionViewCell" customModule="Guitar_Legend" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Ye-p8-MuH">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-KW-uPE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="1">
+                                                        <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DVA-KW-uPE" firstAttribute="top" secondItem="4Ye-p8-MuH" secondAttribute="top" id="V92-7G-GpK"/>
+                                                <constraint firstItem="DVA-KW-uPE" firstAttribute="leading" secondItem="4Ye-p8-MuH" secondAttribute="leading" id="bKt-QD-lw8"/>
+                                                <constraint firstAttribute="trailing" secondItem="DVA-KW-uPE" secondAttribute="trailing" id="eIf-zT-t7P"/>
+                                                <constraint firstAttribute="bottom" secondItem="DVA-KW-uPE" secondAttribute="bottom" id="t8q-gD-mYn"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="challengeButton" destination="DVA-KW-uPE" id="NRY-k4-FRo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="kA4-Ca-Egf" firstAttribute="centerX" secondItem="vIS-fq-7YV" secondAttribute="centerX" id="0yL-ve-bwF"/>
-                            <constraint firstItem="0Nc-p0-F7E" firstAttribute="bottom" secondItem="B6V-2t-p6H" secondAttribute="bottom" constant="30" id="Sbf-8n-3pM"/>
-                            <constraint firstItem="B6V-2t-p6H" firstAttribute="top" secondItem="kA4-Ca-Egf" secondAttribute="bottom" constant="30" id="U1m-uc-cl7"/>
+                            <constraint firstItem="0Nc-p0-F7E" firstAttribute="bottom" secondItem="BbN-sT-6Pl" secondAttribute="bottom" id="9WX-2k-637"/>
+                            <constraint firstItem="0Nc-p0-F7E" firstAttribute="trailing" secondItem="BbN-sT-6Pl" secondAttribute="trailing" id="Bbf-QG-VEC"/>
+                            <constraint firstItem="kA4-Ca-Egf" firstAttribute="top" secondItem="fck-aZ-1eC" secondAttribute="bottom" constant="5" id="Icp-6G-mtf"/>
+                            <constraint firstItem="BbN-sT-6Pl" firstAttribute="top" secondItem="kA4-Ca-Egf" secondAttribute="bottom" constant="10" id="Rhx-Ow-O1t"/>
                             <constraint firstItem="fck-aZ-1eC" firstAttribute="leading" secondItem="0Nc-p0-F7E" secondAttribute="leading" constant="20" id="Wym-MG-dab"/>
+                            <constraint firstItem="BbN-sT-6Pl" firstAttribute="leading" secondItem="0Nc-p0-F7E" secondAttribute="leading" id="mSF-pg-dfi"/>
                             <constraint firstItem="fck-aZ-1eC" firstAttribute="top" secondItem="0Nc-p0-F7E" secondAttribute="top" constant="10" id="nmc-RG-Bhb"/>
-                            <constraint firstItem="B6V-2t-p6H" firstAttribute="centerX" secondItem="vIS-fq-7YV" secondAttribute="centerX" id="vyh-PO-40i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Nc-p0-F7E"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="BbN-sT-6Pl" id="1zw-1x-r8L"/>
                         <segue destination="9CG-UW-oXg" kind="presentation" identifier="goToLessonPage" modalPresentationStyle="fullScreen" id="Scn-6W-WES"/>
                         <segue destination="ONh-dD-eLP" kind="presentation" identifier="goToSettingsPage" modalPresentationStyle="fullScreen" id="GyI-gS-KQq"/>
                     </connections>
@@ -277,16 +319,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oaU-ei-EzI" userLabel="Header">
-                                <rect key="frame" x="68" y="94" width="278.5" height="100"/>
+                                <rect key="frame" x="68" y="94" width="278.5" height="178"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C CHORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAV-Sx-kQl">
-                                        <rect key="frame" x="0.0" y="24" width="198.5" height="52"/>
+                                        <rect key="frame" x="0.0" y="63" width="198.5" height="52"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-du-NxT">
-                                        <rect key="frame" x="198.5" y="10" width="80" height="80"/>
+                                        <rect key="frame" x="198.5" y="49" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="5me-r8-6AT"/>
                                             <constraint firstAttribute="height" constant="80" id="cbc-jN-u71"/>
@@ -295,7 +337,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6kN-YM-MzK" userLabel="Chord Holder">
-                                <rect key="frame" x="87" y="204" width="240" height="418"/>
+                                <rect key="frame" x="87" y="282" width="240" height="340"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker" translatesAutoresizingMaskIntoConstraints="NO" id="2Xj-FU-AdP">
                                         <rect key="frame" x="80" y="0.0" width="80" height="80"/>
@@ -305,10 +347,10 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9nZ-ug-kfd">
-                                        <rect key="frame" x="0.0" y="110" width="240" height="128"/>
+                                        <rect key="frame" x="0.0" y="110" width="240" height="50"/>
                                     </imageView>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oK-xt-crm">
-                                        <rect key="frame" x="5" y="268" width="230" height="150"/>
+                                        <rect key="frame" x="5" y="190" width="230" height="150"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Wa1-uI-29w"/>
