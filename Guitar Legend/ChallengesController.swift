@@ -47,6 +47,7 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
             as! ChallengeCollectionViewCell
         
         cell.setChallege(challege: challenges[indexPath.row])
+       
         
         return cell
         

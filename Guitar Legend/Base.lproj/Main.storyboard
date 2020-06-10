@@ -109,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU ARE A LEGEND!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-Ca-Egf">
-                                <rect key="frame" x="50" y="99" width="314" height="50"/>
+                                <rect key="frame" x="50" y="114" width="314" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UNb-Ad-had"/>
                                 </constraints>
@@ -126,24 +126,24 @@
                                 <state key="normal" backgroundImage="settings"/>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BbN-sT-6Pl">
-                                <rect key="frame" x="0.0" y="159" width="414" height="703"/>
+                                <rect key="frame" x="20" y="214" width="374" height="648"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rB7-ca-dJw">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rB7-ca-dJw">
+                                    <size key="itemSize" width="80" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChallengeCell" id="gMb-Ov-cOc" customClass="ChallengeCollectionViewCell" customModule="Guitar_Legend" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4Ye-p8-MuH">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-KW-uPE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -159,7 +159,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="DVA-KW-uPE" secondAttribute="bottom" id="t8q-gD-mYn"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="100" height="100"/>
                                         <connections>
                                             <outlet property="challengeButton" destination="DVA-KW-uPE" id="NRY-k4-FRo"/>
                                         </connections>
@@ -171,11 +170,11 @@
                         <constraints>
                             <constraint firstItem="kA4-Ca-Egf" firstAttribute="centerX" secondItem="vIS-fq-7YV" secondAttribute="centerX" id="0yL-ve-bwF"/>
                             <constraint firstItem="0Nc-p0-F7E" firstAttribute="bottom" secondItem="BbN-sT-6Pl" secondAttribute="bottom" id="9WX-2k-637"/>
-                            <constraint firstItem="0Nc-p0-F7E" firstAttribute="trailing" secondItem="BbN-sT-6Pl" secondAttribute="trailing" id="Bbf-QG-VEC"/>
-                            <constraint firstItem="kA4-Ca-Egf" firstAttribute="top" secondItem="fck-aZ-1eC" secondAttribute="bottom" constant="5" id="Icp-6G-mtf"/>
-                            <constraint firstItem="BbN-sT-6Pl" firstAttribute="top" secondItem="kA4-Ca-Egf" secondAttribute="bottom" constant="10" id="Rhx-Ow-O1t"/>
+                            <constraint firstItem="0Nc-p0-F7E" firstAttribute="trailing" secondItem="BbN-sT-6Pl" secondAttribute="trailing" constant="20" id="Bbf-QG-VEC"/>
+                            <constraint firstItem="kA4-Ca-Egf" firstAttribute="top" secondItem="fck-aZ-1eC" secondAttribute="bottom" constant="20" id="Icp-6G-mtf"/>
+                            <constraint firstItem="BbN-sT-6Pl" firstAttribute="top" secondItem="kA4-Ca-Egf" secondAttribute="bottom" constant="50" id="Rhx-Ow-O1t"/>
                             <constraint firstItem="fck-aZ-1eC" firstAttribute="leading" secondItem="0Nc-p0-F7E" secondAttribute="leading" constant="20" id="Wym-MG-dab"/>
-                            <constraint firstItem="BbN-sT-6Pl" firstAttribute="leading" secondItem="0Nc-p0-F7E" secondAttribute="leading" id="mSF-pg-dfi"/>
+                            <constraint firstItem="BbN-sT-6Pl" firstAttribute="leading" secondItem="0Nc-p0-F7E" secondAttribute="leading" constant="20" id="mSF-pg-dfi"/>
                             <constraint firstItem="fck-aZ-1eC" firstAttribute="top" secondItem="0Nc-p0-F7E" secondAttribute="top" constant="10" id="nmc-RG-Bhb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Nc-p0-F7E"/>

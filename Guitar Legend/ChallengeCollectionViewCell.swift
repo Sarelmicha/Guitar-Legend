@@ -19,23 +19,21 @@ class ChallengeCollectionViewCell: UICollectionViewCell {
         
         challengeButton.setTitle(String(challege.numOfChallenge), for: .normal)
         
-        challengeButton.frame = CGRect(x: 160, y: 100, width: 50, height: 50)
+        challengeButton.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
         challengeButton.layer.cornerRadius = 0.5 * challengeButton.bounds.size.width
         challengeButton.clipsToBounds = true
         challengeButton.backgroundColor = UIColor.clear
-        challengeButton.layer.borderWidth = 3.0
+        challengeButton.layer.borderWidth = 4.0
+        
+       
         
         
         if(challege.isActive){
+            challengeButton.setTitleColor(UIColor(red: 0, green: 250, blue: 255, alpha: 255), for: .normal)
             challengeButton.layer.borderColor = UIColor(red: 0, green: 250, blue: 255, alpha: 255).cgColor
         } else {
+            challengeButton.setTitleColor(UIColor(red: 186, green: 208, blue: 208, alpha: 255), for: .normal)
             challengeButton.layer.borderColor = UIColor(red: 186, green: 208, blue: 208, alpha: 255).cgColor
         }
-        
-        
     }
-    
-    
-
-    
 }
