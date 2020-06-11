@@ -27,7 +27,8 @@ class LoginController: UIViewController {
        
        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        _ = segue.destination as! ChallengesController
+        let challengePage = segue.destination as! ChallengesController
+        challengePage.currentUser = User(id: 1, currentChallenge: 13)
             
        }
 

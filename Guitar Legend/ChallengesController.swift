@@ -11,15 +11,16 @@ import UIKit
 class ChallengesController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var challengeModel = ChallengeModel()
+    var currentUser : User!
+    var challengeModel  : ChallengeModel!
     var challenges = [Challenge]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        challengeModel = ChallengeModel(currentUser: currentUser)
         setCollectionView()
         
         // Call the getChallenges method of the challenge model
@@ -54,7 +55,21 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO - when challenge has been clicked do something!
+        
+        // Get the cell that the user selected
+        let cell = collectionView.cellForItem(at: indexPath) as! ChallengeCollectionViewCell
+        
+        // Geth the challenge that the user selected
+        let challenge = challenges[indexPath.row]
+        
+        if(challenge.numOfChallenge <= currentUser.currentChallenge){
+            //Navigate to the challenge
+            
+        } else {
+            //TODO - Pop up error message
+        }
+        
+        
         
     }
     
