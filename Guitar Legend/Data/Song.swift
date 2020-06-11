@@ -14,14 +14,14 @@ class Song {
     var name : String
     var singer : String
     var image : UIImage
-    var songUrl : String
+    var songVideoId : String
     
     init(name : String ,singer : String ,image : UIImage,songUrl : String) {
         
         self.name = name
         self.singer = singer
         self.image = image
-        self.songUrl = songUrl
+        self.songVideoId = songUrl
     }
     
     

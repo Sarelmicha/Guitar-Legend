@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2FE646EC2AB0E36737B660 /* Pods_Guitar_Legend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39CB00936DBFE651A4C6D26B /* Pods_Guitar_Legend.framework */; };
 		C71C888C2492153800BAE73F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C888B2492153800BAE73F /* User.swift */; };
 		C71C889124921AC100BAE73F /* LessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C889024921AC100BAE73F /* LessonController.swift */; };
 		C71C88932492305C00BAE73F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C88922492305C00BAE73F /* Song.swift */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39CB00936DBFE651A4C6D26B /* Pods_Guitar_Legend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guitar_Legend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		481DAF5B9A53D0C3A0F2BBCE /* Pods-Guitar Legend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guitar Legend.release.xcconfig"; path = "Target Support Files/Pods-Guitar Legend/Pods-Guitar Legend.release.xcconfig"; sourceTree = "<group>"; };
 		C71C888B2492153800BAE73F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C71C889024921AC100BAE73F /* LessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonController.swift; sourceTree = "<group>"; };
 		C71C88922492305C00BAE73F /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		C761F7C2248F7CBE00F7BA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C761F7C5248F7CBE00F7BA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C761F7C7248F7CBE00F7BA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF7BB526901DEFA4BC0D287D /* Pods-Guitar Legend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guitar Legend.debug.xcconfig"; path = "Target Support Files/Pods-Guitar Legend/Pods-Guitar Legend.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +59,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2FE646EC2AB0E36737B660 /* Pods_Guitar_Legend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		850BD904A5E307BCFDC9531C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF7BB526901DEFA4BC0D287D /* Pods-Guitar Legend.debug.xcconfig */,
+				481DAF5B9A53D0C3A0F2BBCE /* Pods-Guitar Legend.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BC2652CB5CCC0A39CEDEF49D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39CB00936DBFE651A4C6D26B /* Pods_Guitar_Legend.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C71C888D24921A1800BAE73F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +122,8 @@
 			children = (
 				C761F7B8248F7CBC00F7BA46 /* Guitar Legend */,
 				C761F7B7248F7CBC00F7BA46 /* Products */,
+				850BD904A5E307BCFDC9531C /* Pods */,
+				BC2652CB5CCC0A39CEDEF49D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C761F7CA248F7CBE00F7BA46 /* Build configuration list for PBXNativeTarget "Guitar Legend" */;
 			buildPhases = (
+				27DA9BE91BAF8D72A1F3FC5D /* [CP] Check Pods Manifest.lock */,
 				C761F7B2248F7CBC00F7BA46 /* Sources */,
 				C761F7B3248F7CBC00F7BA46 /* Frameworks */,
 				C761F7B4248F7CBC00F7BA46 /* Resources */,
+				0C74159C528676D25A3DF913 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +219,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C74159C528676D25A3DF913 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guitar Legend/Pods-Guitar Legend-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guitar Legend/Pods-Guitar Legend-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Guitar Legend/Pods-Guitar Legend-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27DA9BE91BAF8D72A1F3FC5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Guitar Legend-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C761F7B2248F7CBC00F7BA46 /* Sources */ = {
@@ -354,6 +423,7 @@
 		};
 		C761F7CB248F7CBE00F7BA46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF7BB526901DEFA4BC0D287D /* Pods-Guitar Legend.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -371,6 +441,7 @@
 		};
 		C761F7CC248F7CBE00F7BA46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 481DAF5B9A53D0C3A0F2BBCE /* Pods-Guitar Legend.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
