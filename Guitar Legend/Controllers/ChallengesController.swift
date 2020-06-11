@@ -16,6 +16,7 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     var currentUser : User!
     var challengeModel  : ChallengeModel!
     var challenges = [Challenge]()
+    var pickedChallenge : Challenge!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +57,21 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        // Get the cell that the user selected
-        let cell = collectionView.cellForItem(at: indexPath) as! ChallengeCollectionViewCell
+       print("inside didSelecetItem")
+        // Get the challenge that the user selected
+        pickedChallenge = challenges[indexPath.row]
+        print(pickedChallenge.numOfChallenge)
         
-        // Geth the challenge that the user selected
-        let challenge = challenges[indexPath.row]
         
-        if(challenge.numOfChallenge <= currentUser.currentChallenge){
-            //Navigate to the challenge
+         
+        
+        if(pickedChallenge.numOfChallenge <= currentUser.currentChallenge){
             
+            print("inside if")
+            
+            self.performSegue(withIdentifier: "goToLessonPage", sender: self)
+
+    
         } else {
             //TODO - Pop up error message
         }
@@ -78,7 +85,16 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
      //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "goToLessonPage"){
          
+        let lessonPage = segue.destination as! LessonController
+                
+        lessonPage.challenge = pickedChallenge
+            
+        }
+        
+
     }
     
 

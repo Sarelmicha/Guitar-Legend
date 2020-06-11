@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C71C888C2492153800BAE73F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C888B2492153800BAE73F /* User.swift */; };
+		C71C889124921AC100BAE73F /* LessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C889024921AC100BAE73F /* LessonController.swift */; };
+		C71C88932492305C00BAE73F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C88922492305C00BAE73F /* Song.swift */; };
+		C71C88952492378300BAE73F /* SongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C88942492378300BAE73F /* SongController.swift */; };
+		C71C88972492445F00BAE73F /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C88962492445F00BAE73F /* LessonModel.swift */; };
+		C71C88992492481F00BAE73F /* ChordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C88982492481F00BAE73F /* ChordController.swift */; };
+		C71C889B24924AA500BAE73F /* YouTubeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C889A24924AA500BAE73F /* YouTubeController.swift */; };
 		C72AE92524911C34009D6885 /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92424911C34009D6885 /* ChallengeModel.swift */; };
 		C72AE92724911DBF009D6885 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92624911DBF009D6885 /* Challenge.swift */; };
 		C72AE92924911DDA009D6885 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92824911DDA009D6885 /* Chord.swift */; };
@@ -23,6 +29,12 @@
 
 /* Begin PBXFileReference section */
 		C71C888B2492153800BAE73F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C71C889024921AC100BAE73F /* LessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonController.swift; sourceTree = "<group>"; };
+		C71C88922492305C00BAE73F /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		C71C88942492378300BAE73F /* SongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongController.swift; sourceTree = "<group>"; };
+		C71C88962492445F00BAE73F /* LessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonModel.swift; sourceTree = "<group>"; };
+		C71C88982492481F00BAE73F /* ChordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordController.swift; sourceTree = "<group>"; };
+		C71C889A24924AA500BAE73F /* YouTubeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeController.swift; sourceTree = "<group>"; };
 		C72AE92424911C34009D6885 /* ChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeModel.swift; sourceTree = "<group>"; };
 		C72AE92624911DBF009D6885 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		C72AE92824911DDA009D6885 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
@@ -49,6 +61,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C71C888D24921A1800BAE73F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C761F7BD248F7CBC00F7BA46 /* LoginController.swift */,
+				C72AE92A24912523009D6885 /* ChallengesController.swift */,
+				C71C889024921AC100BAE73F /* LessonController.swift */,
+				C71C88942492378300BAE73F /* SongController.swift */,
+				C71C88982492481F00BAE73F /* ChordController.swift */,
+				C71C889A24924AA500BAE73F /* YouTubeController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C71C888E24921A3500BAE73F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C72AE92424911C34009D6885 /* ChallengeModel.swift */,
+				C71C88962492445F00BAE73F /* LessonModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C71C888F24921A5000BAE73F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C71C888B2492153800BAE73F /* User.swift */,
+				C72AE92624911DBF009D6885 /* Challenge.swift */,
+				C72AE92824911DDA009D6885 /* Chord.swift */,
+				C71C88922492305C00BAE73F /* Song.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		C761F7AD248F7CBC00F7BA46 = {
 			isa = PBXGroup;
 			children = (
@@ -68,15 +113,12 @@
 		C761F7B8248F7CBC00F7BA46 /* Guitar Legend */ = {
 			isa = PBXGroup;
 			children = (
+				C71C888F24921A5000BAE73F /* Data */,
+				C71C888E24921A3500BAE73F /* Models */,
+				C71C888D24921A1800BAE73F /* Controllers */,
 				C761F7B9248F7CBC00F7BA46 /* AppDelegate.swift */,
 				C761F7BB248F7CBC00F7BA46 /* SceneDelegate.swift */,
-				C761F7BD248F7CBC00F7BA46 /* LoginController.swift */,
-				C72AE92A24912523009D6885 /* ChallengesController.swift */,
-				C72AE92424911C34009D6885 /* ChallengeModel.swift */,
 				C72AE92D249126CD009D6885 /* ChallengeCollectionViewCell.swift */,
-				C71C888B2492153800BAE73F /* User.swift */,
-				C72AE92624911DBF009D6885 /* Challenge.swift */,
-				C72AE92824911DDA009D6885 /* Chord.swift */,
 				C761F7BF248F7CBC00F7BA46 /* Main.storyboard */,
 				C761F7C2248F7CBE00F7BA46 /* Assets.xcassets */,
 				C761F7C4248F7CBE00F7BA46 /* LaunchScreen.storyboard */,
@@ -156,11 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C71C889B24924AA500BAE73F /* YouTubeController.swift in Sources */,
 				C72AE92924911DDA009D6885 /* Chord.swift in Sources */,
 				C761F7BE248F7CBC00F7BA46 /* LoginController.swift in Sources */,
 				C72AE92E249126CD009D6885 /* ChallengeCollectionViewCell.swift in Sources */,
+				C71C88972492445F00BAE73F /* LessonModel.swift in Sources */,
 				C72AE92B24912523009D6885 /* ChallengesController.swift in Sources */,
 				C761F7BA248F7CBC00F7BA46 /* AppDelegate.swift in Sources */,
+				C71C88992492481F00BAE73F /* ChordController.swift in Sources */,
+				C71C88932492305C00BAE73F /* Song.swift in Sources */,
+				C71C88952492378300BAE73F /* SongController.swift in Sources */,
+				C71C889124921AC100BAE73F /* LessonController.swift in Sources */,
 				C71C888C2492153800BAE73F /* User.swift in Sources */,
 				C761F7BC248F7CBC00F7BA46 /* SceneDelegate.swift in Sources */,
 				C72AE92524911C34009D6885 /* ChallengeModel.swift in Sources */,
