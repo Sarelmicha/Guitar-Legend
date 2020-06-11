@@ -15,14 +15,14 @@ class Chord {
     var name : String
     var sound : String
     var chordImage : UIImage
-    var chordUrl : String
+    var chordVideoId : String
     
     init(name : String,sound : String, chordImage : UIImage, chordUrl : String) {
         
         self.name = name
         self.sound = sound
         self.chordImage = chordImage
-        self.chordUrl = chordUrl
+        self.chordVideoId = chordUrl
     }
     
     

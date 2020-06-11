@@ -17,7 +17,7 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     var challengeModel  : ChallengeModel!
     var challenges = [Challenge]()
     var pickedChallenge : Challenge!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +49,7 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
             as! ChallengeCollectionViewCell
         
         cell.setChallege(challege: challenges[indexPath.row])
-       
+        
         
         return cell
         
@@ -57,21 +57,14 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-       print("inside didSelecetItem")
         // Get the challenge that the user selected
         pickedChallenge = challenges[indexPath.row]
-        print(pickedChallenge.numOfChallenge)
-        
-        
-         
         
         if(pickedChallenge.numOfChallenge <= currentUser.currentChallenge){
-            
-            print("inside if")
-            
+                    
             self.performSegue(withIdentifier: "goToLessonPage", sender: self)
-
-    
+            
+            
         } else {
             //TODO - Pop up error message
         }
@@ -80,22 +73,23 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
         
     }
     
-
     
-     //MARK: - Navigation
+    
+    //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if(segue.identifier == "goToLessonPage"){
-         
-        let lessonPage = segue.destination as! LessonController
-                
-        lessonPage.challenge = pickedChallenge
+            
+            let lessonPage = segue.destination as! LessonController
+            
+            lessonPage.challenge = pickedChallenge
+            lessonPage.currentUser = currentUser
             
         }
         
-
+        
     }
     
-
+    
 }

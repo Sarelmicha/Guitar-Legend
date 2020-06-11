@@ -54,7 +54,7 @@ class ChordController: UIViewController {
         if(segue.identifier == "goToYouTubePage"){
             
             let youTubePage = segue.destination as! YouTubeController
-            youTubePage.url = chord.chordUrl
+            youTubePage.videoId = chord.chordVideoId
             
         }
         

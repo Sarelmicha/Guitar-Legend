@@ -18,7 +18,6 @@ class ChallengeCollectionViewCell: UICollectionViewCell {
     func setChallege(challege : Challenge) {
         
         challengeButton.setTitle(String(challege.numOfChallenge), for: .normal)
-        
         challengeButton.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
         challengeButton.layer.cornerRadius = 0.5 * challengeButton.bounds.size.width
         challengeButton.clipsToBounds = true

@@ -19,12 +19,12 @@ class LessonController: UIViewController {
     @IBOutlet weak var secondChordButton: UIButton!
     @IBOutlet weak var firstChordButton: UIButton!
     @IBOutlet weak var songButton: UIButton!
+    @IBOutlet weak var youTubeButton: UIButton!
+    
     var challenge : Challenge!
     var lessonModel : LessonModel!
     var selectedChord : Chord!
-    
-
-    
+    var currentUser : User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,11 @@ class LessonController: UIViewController {
     }
     
     
+    @IBAction func onYouTubeButtonPressed(_ sender: UIButton) {
+        
+         self.performSegue(withIdentifier: "goToYouTubePage", sender: self)
+        
+    }
     @IBAction func onChordButtonPressed(_ sender: UIButton) {
         
         selectedChord = lessonModel.checkSelectedChord(selectedChordName: sender.titleLabel!.text!)
@@ -63,6 +68,17 @@ class LessonController: UIViewController {
     }
     
     
+    @IBAction func onNextChallengeButtonPressed(_ sender: UIButton) {
+        
+        currentUser.currentChallenge += 1
+        
+        //Make a Rock N Roll Sound!
+        
+//        onBackButtonPressed(sender)
+        
+        self.performSegue(withIdentifier: "goToChallengesPage", sender: self)
+
+    }
     
      //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,8 +92,15 @@ class LessonController: UIViewController {
             
             let chordPage = segue.destination as! ChordController
             chordPage.chord = selectedChord
+         } else if(segue.identifier == "goToYouTubePage") {
+            
+            let youTubePage = segue.destination as! YouTubeController
+            youTubePage.videoId = challenge.song.songVideoId
+        } else if(segue.identifier == "goToChallengesPage") {
+            
+            let challengesPage = segue.destination as! ChallengesController
+            challengesPage.currentUser = currentUser
+            
         }
-    
-
     }
 }
