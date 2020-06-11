@@ -14,20 +14,14 @@ class Challenge {
     
     var numOfChallenge : Int
     var chords : [Chord]
-    var songName : String
-    var songImage : UIImage
-    var songUrl : String
+    var song : Song
     var isActive : Bool
     
-    init(numOfChallenge : Int, chords : [Chord],songName : String,songImage : UIImage,songUrl : String, isActive : Bool) {
+    init(numOfChallenge : Int, chords : [Chord],song : Song, isActive : Bool) {
         
         self.numOfChallenge = numOfChallenge
         self.chords = chords
-        self.songName = songName
-        self.songImage = songImage
-        self.songUrl = songUrl
+        self.song  = song
         self.isActive = isActive
     }
-    
-    
 }

@@ -142,7 +142,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-KW-uPE">
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-KW-uPE">
                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
@@ -192,7 +192,7 @@
         <!--Lesson Controller-->
         <scene sceneID="O8I-QE-9z6">
             <objects>
-                <viewController id="9CG-UW-oXg" userLabel="Lesson Controller" sceneMemberID="viewController">
+                <viewController id="9CG-UW-oXg" userLabel="Lesson Controller" customClass="LessonController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="maC-6d-aPf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,15 +221,33 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpv-1A-8CP" userLabel="Chords Holder">
-                                <rect key="frame" x="32" y="233" width="350" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="OxI-hN-vbN"/>
-                                    <constraint firstAttribute="width" constant="350" id="Pef-bi-Cqe"/>
-                                </constraints>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="140" translatesAutoresizingMaskIntoConstraints="NO" id="bYM-X5-HJp" userLabel="Chords Holder">
+                                <rect key="frame" x="98" y="273" width="218" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkF-uQ-Kci">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="77"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
+                                        <state key="normal" title="C">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onChordButtonPressed:" destination="9CG-UW-oXg" eventType="touchUpInside" id="hxV-DN-4R8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAs-ox-sMh">
+                                        <rect key="frame" x="174" y="0.0" width="44" height="77"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
+                                        <state key="normal" title="G">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onChordButtonPressed:" destination="9CG-UW-oXg" eventType="touchUpInside" id="QnD-XW-JaM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="o3P-qh-8X8" userLabel="Challenge Header">
-                                <rect key="frame" x="43.5" y="358" width="327.5" height="85"/>
+                                <rect key="frame" x="43.5" y="390" width="327.5" height="85"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LESSON CHALLENGE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1G-dH-RMU">
                                         <rect key="frame" x="0.0" y="0.0" width="327.5" height="39"/>
@@ -245,23 +263,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music-file" translatesAutoresizingMaskIntoConstraints="NO" id="Bzf-gY-EjG">
-                                <rect key="frame" x="175" y="473" width="64" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="kNh-We-0n4"/>
-                                </constraints>
-                            </imageView>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oj-G5-ubM">
-                                <rect key="frame" x="43.5" y="593" width="327.5" height="150"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="sU3-H0-OcJ"/>
-                                </constraints>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVK-ls-QIt">
                                 <rect key="frame" x="20" y="54" width="50" height="50"/>
                                 <constraints>
@@ -269,40 +270,64 @@
                                     <constraint firstAttribute="width" constant="50" id="fPr-V3-NpV"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="left-arrow"/>
+                                <connections>
+                                    <action selector="onBackButtonPressed:" destination="9CG-UW-oXg" eventType="touchUpInside" id="pBB-cZ-0f5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-5q-ZHJ">
-                                <rect key="frame" x="55" y="783" width="304" height="34"/>
+                                <rect key="frame" x="55" y="789" width="304" height="34"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <state key="normal" title="I'M READY FOR MY NEXT CHALLENGE!">
                                     <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hkk-q3-QuX">
+                                <rect key="frame" x="118" y="575" width="178" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yto-eh-Zty">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <state key="normal" backgroundImage="music-file"/>
+                                        <connections>
+                                            <action selector="onSongButtonPressed:" destination="9CG-UW-oXg" eventType="touchUpInside" id="SHC-BP-4Pc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J4-46-UDM" userLabel="YouTube Button">
+                                        <rect key="frame" x="114" y="0.0" width="64" height="64"/>
+                                        <state key="normal" backgroundImage="youtube"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QRY-8j-NLi" firstAttribute="top" secondItem="hfd-SO-v7Z" secondAttribute="bottom" constant="10" id="4Vy-GI-RNg"/>
-                            <constraint firstItem="Bzf-gY-EjG" firstAttribute="top" secondItem="o3P-qh-8X8" secondAttribute="bottom" constant="30" id="8EP-aR-QFg"/>
-                            <constraint firstItem="Bzf-gY-EjG" firstAttribute="centerX" secondItem="maC-6d-aPf" secondAttribute="centerX" id="Bsx-oN-WkJ"/>
                             <constraint firstItem="hfd-SO-v7Z" firstAttribute="top" secondItem="pnm-Mu-J96" secondAttribute="top" constant="50" id="DTd-3n-qa6"/>
-                            <constraint firstItem="wpv-1A-8CP" firstAttribute="centerX" secondItem="maC-6d-aPf" secondAttribute="centerX" id="J7l-3d-EyO"/>
-                            <constraint firstItem="o3P-qh-8X8" firstAttribute="top" secondItem="wpv-1A-8CP" secondAttribute="bottom" constant="25" id="Jc7-To-5id"/>
-                            <constraint firstItem="1oj-G5-ubM" firstAttribute="centerX" secondItem="maC-6d-aPf" secondAttribute="centerX" id="Qdq-DK-0Rv"/>
+                            <constraint firstItem="hkk-q3-QuX" firstAttribute="centerX" secondItem="maC-6d-aPf" secondAttribute="centerX" id="NKP-45-mby"/>
+                            <constraint firstItem="o3P-qh-8X8" firstAttribute="top" secondItem="bYM-X5-HJp" secondAttribute="bottom" constant="40" id="T8j-LJ-Vuq"/>
+                            <constraint firstItem="hkk-q3-QuX" firstAttribute="top" secondItem="o3P-qh-8X8" secondAttribute="bottom" constant="100" id="Tmh-p6-BRr"/>
                             <constraint firstItem="UVK-ls-QIt" firstAttribute="leading" secondItem="pnm-Mu-J96" secondAttribute="leading" constant="20" id="VbJ-Qn-oJu"/>
-                            <constraint firstItem="wpv-1A-8CP" firstAttribute="top" secondItem="QRY-8j-NLi" secondAttribute="bottom" constant="10" id="Vog-IQ-e2j"/>
                             <constraint firstItem="QRY-8j-NLi" firstAttribute="centerX" secondItem="maC-6d-aPf" secondAttribute="centerX" id="d6E-Ar-HRv"/>
                             <constraint firstItem="hfd-SO-v7Z" firstAttribute="centerX" secondItem="maC-6d-aPf" secondAttribute="centerX" id="feM-eh-FjG"/>
                             <constraint firstItem="UVK-ls-QIt" firstAttribute="top" secondItem="pnm-Mu-J96" secondAttribute="top" constant="10" id="jAT-QP-TlG"/>
                             <constraint firstItem="7MA-5q-ZHJ" firstAttribute="centerX" secondItem="maC-6d-aPf" secondAttribute="centerX" id="nbT-ud-U6K"/>
-                            <constraint firstItem="1oj-G5-ubM" firstAttribute="trailing" secondItem="o3P-qh-8X8" secondAttribute="trailing" id="ouo-16-Sf2"/>
+                            <constraint firstItem="bYM-X5-HJp" firstAttribute="centerX" secondItem="maC-6d-aPf" secondAttribute="centerX" id="nij-Sr-qcS"/>
+                            <constraint firstItem="bYM-X5-HJp" firstAttribute="top" secondItem="QRY-8j-NLi" secondAttribute="bottom" constant="50" id="r2S-CK-tc7"/>
                             <constraint firstItem="o3P-qh-8X8" firstAttribute="centerX" secondItem="maC-6d-aPf" secondAttribute="centerX" id="tOg-hI-qRY"/>
-                            <constraint firstItem="1oj-G5-ubM" firstAttribute="top" secondItem="Bzf-gY-EjG" secondAttribute="bottom" constant="20" id="uWS-VP-bMv"/>
-                            <constraint firstItem="7MA-5q-ZHJ" firstAttribute="top" secondItem="1oj-G5-ubM" secondAttribute="bottom" constant="40" id="zRP-i9-KZE"/>
+                            <constraint firstItem="7MA-5q-ZHJ" firstAttribute="top" secondItem="hkk-q3-QuX" secondAttribute="bottom" constant="150" id="xtQ-bH-NhK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pnm-Mu-J96"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="UVK-ls-QIt" id="MLG-i2-lTN"/>
+                        <outlet property="firstChordButton" destination="tkF-uQ-Kci" id="wDH-ly-QcK"/>
+                        <outlet property="lessonHeader" destination="sIF-1s-0vG" id="oru-SI-Bsi"/>
+                        <outlet property="nextChallengeButton" destination="7MA-5q-ZHJ" id="iGH-u1-v16"/>
+                        <outlet property="secondChordButton" destination="oAs-ox-sMh" id="zMu-lq-pIV"/>
+                        <outlet property="songButton" destination="Yto-eh-Zty" id="smj-Sm-sBQ"/>
+                        <outlet property="songNameLabel" destination="cHZ-OJ-LGf" id="5oF-Mn-A5u"/>
                         <segue destination="shi-cQ-BPY" kind="presentation" identifier="goToChordPage" modalPresentationStyle="fullScreen" id="n34-GA-cPY"/>
                         <segue destination="KXZ-4o-vtt" kind="presentation" identifier="goToSongPage" modalPresentationStyle="fullScreen" id="gjY-0D-1qd"/>
+                        <segue destination="jcT-4h-beg" kind="presentation" identifier="goToYouTubePage" modalPresentationStyle="fullScreen" id="ozR-7f-VP2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYo-GP-WB4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -312,22 +337,22 @@
         <!--Chord Controller-->
         <scene sceneID="RZT-hQ-O1O">
             <objects>
-                <viewController id="shi-cQ-BPY" userLabel="Chord Controller" sceneMemberID="viewController">
+                <viewController id="shi-cQ-BPY" userLabel="Chord Controller" customClass="ChordController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIw-Cf-8uZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oaU-ei-EzI" userLabel="Header">
-                                <rect key="frame" x="68" y="94" width="278.5" height="178"/>
+                                <rect key="frame" x="68" y="94" width="278.5" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C CHORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAV-Sx-kQl">
-                                        <rect key="frame" x="0.0" y="63" width="198.5" height="52"/>
+                                        <rect key="frame" x="0.0" y="14" width="198.5" height="52"/>
                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dlf-du-NxT">
-                                        <rect key="frame" x="198.5" y="49" width="80" height="80"/>
+                                        <rect key="frame" x="198.5" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="5me-r8-6AT"/>
                                             <constraint firstAttribute="height" constant="80" id="cbc-jN-u71"/>
@@ -335,35 +360,32 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6kN-YM-MzK" userLabel="Chord Holder">
-                                <rect key="frame" x="87" y="282" width="240" height="340"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-2X-rFf">
+                                <rect key="frame" x="77" y="224" width="260" height="80"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker" translatesAutoresizingMaskIntoConstraints="NO" id="2Xj-FU-AdP">
-                                        <rect key="frame" x="80" y="0.0" width="80" height="80"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnF-Er-PRL" userLabel="Sound Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="wWh-75-oMP"/>
-                                            <constraint firstAttribute="height" constant="80" id="wY3-sj-ecl"/>
+                                            <constraint firstAttribute="height" constant="80" id="asE-70-2zl"/>
+                                            <constraint firstAttribute="width" constant="80" id="tPU-he-iHq"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9nZ-ug-kfd">
-                                        <rect key="frame" x="0.0" y="110" width="240" height="50"/>
-                                    </imageView>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oK-xt-crm">
-                                        <rect key="frame" x="5" y="190" width="230" height="150"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" backgroundImage="speaker"/>
+                                        <connections>
+                                            <action selector="onSoundButtonPressed:" destination="shi-cQ-BPY" eventType="touchUpInside" id="Qmx-M7-895"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9p-FE-TP5" userLabel="YouTube Button">
+                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="Wa1-uI-29w"/>
+                                            <constraint firstAttribute="width" constant="80" id="7Bk-BF-FNd"/>
+                                            <constraint firstAttribute="height" constant="80" id="kYK-Bt-BIJ"/>
                                         </constraints>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
+                                        <state key="normal" backgroundImage="youtube"/>
+                                        <connections>
+                                            <action selector="onYouTubeButtonPressed:" destination="shi-cQ-BPY" eventType="touchUpInside" id="NTC-nL-mCn"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="9nZ-ug-kfd" firstAttribute="leading" secondItem="6kN-YM-MzK" secondAttribute="leadingMargin" id="Vdm-xg-8Y3"/>
-                                    <constraint firstItem="4oK-xt-crm" firstAttribute="leading" secondItem="6kN-YM-MzK" secondAttribute="leading" constant="5" id="fHV-JC-oSA"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcV-GS-n9o">
                                 <rect key="frame" x="20" y="54" width="50" height="50"/>
@@ -372,23 +394,42 @@
                                     <constraint firstAttribute="height" constant="50" id="f0O-c4-DyY"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="left-arrow"/>
+                                <connections>
+                                    <action selector="backButton:" destination="hNi-Z4-uDX" eventType="touchUpInside" id="5GD-kj-eez"/>
+                                    <action selector="onBackButtonPressed:" destination="shi-cQ-BPY" eventType="touchUpInside" id="bRQ-V1-4ri"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ybG-d1-QXn">
+                                <rect key="frame" x="10" y="354" width="394" height="488"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6kN-YM-MzK" firstAttribute="centerX" secondItem="BIw-Cf-8uZ" secondAttribute="centerX" id="0ZX-iV-Blc"/>
                             <constraint firstItem="oaU-ei-EzI" firstAttribute="top" secondItem="y6D-Fc-5QP" secondAttribute="top" constant="50" id="1Bu-Qg-clj"/>
                             <constraint firstItem="xcV-GS-n9o" firstAttribute="top" secondItem="y6D-Fc-5QP" secondAttribute="top" constant="10" id="6U3-03-fno"/>
+                            <constraint firstItem="ybG-d1-QXn" firstAttribute="centerX" secondItem="BIw-Cf-8uZ" secondAttribute="centerX" id="6Uz-Mr-SBL"/>
                             <constraint firstItem="xcV-GS-n9o" firstAttribute="leading" secondItem="y6D-Fc-5QP" secondAttribute="leading" constant="20" id="9zk-5l-5Xc"/>
-                            <constraint firstItem="y6D-Fc-5QP" firstAttribute="bottom" secondItem="6kN-YM-MzK" secondAttribute="bottom" constant="240" id="Ocp-A2-ptb"/>
-                            <constraint firstItem="6kN-YM-MzK" firstAttribute="top" secondItem="oaU-ei-EzI" secondAttribute="bottom" constant="10" id="TXu-WN-Y37"/>
-                            <constraint firstItem="6kN-YM-MzK" firstAttribute="leading" secondItem="y6D-Fc-5QP" secondAttribute="leading" constant="87" id="rFH-aG-2yY"/>
+                            <constraint firstItem="qsX-2X-rFf" firstAttribute="centerX" secondItem="BIw-Cf-8uZ" secondAttribute="centerX" id="Anp-JT-pPs"/>
+                            <constraint firstItem="ybG-d1-QXn" firstAttribute="top" secondItem="qsX-2X-rFf" secondAttribute="bottom" constant="50" id="GKH-P6-hRQ"/>
+                            <constraint firstItem="y6D-Fc-5QP" firstAttribute="trailing" secondItem="ybG-d1-QXn" secondAttribute="trailing" constant="10" id="Gad-1M-px3"/>
+                            <constraint firstItem="ybG-d1-QXn" firstAttribute="leading" secondItem="y6D-Fc-5QP" secondAttribute="leading" constant="10" id="K0j-ro-zlF"/>
+                            <constraint firstItem="y6D-Fc-5QP" firstAttribute="bottom" secondItem="ybG-d1-QXn" secondAttribute="bottom" constant="20" id="N57-bm-az9"/>
+                            <constraint firstItem="qsX-2X-rFf" firstAttribute="top" secondItem="oaU-ei-EzI" secondAttribute="bottom" constant="50" id="f3D-vJ-2DE"/>
                             <constraint firstItem="oaU-ei-EzI" firstAttribute="centerX" secondItem="BIw-Cf-8uZ" secondAttribute="centerX" id="vF5-rt-g9F"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y6D-Fc-5QP"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="xcV-GS-n9o" id="Z6e-3b-Nai"/>
+                        <outlet property="chordImage" destination="ybG-d1-QXn" id="JAH-nh-jdj"/>
+                        <outlet property="chordLabel" destination="SAV-Sx-kQl" id="zKC-EC-5L3"/>
+                        <outlet property="soundButton" destination="RnF-Er-PRL" id="AQK-s0-6cM"/>
+                        <outlet property="youtubeButton" destination="s9p-FE-TP5" id="sbl-Nu-bWt"/>
+                        <segue destination="jcT-4h-beg" kind="presentation" identifier="goToYouTubePage" modalPresentationStyle="fullScreen" id="d8m-ty-e72"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGf-Jg-suu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hNi-Z4-uDX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2666.666666666667" y="137.94642857142856"/>
         </scene>
@@ -548,7 +589,7 @@
         <!--Song Controller-->
         <scene sceneID="uHw-dF-BvA">
             <objects>
-                <viewController id="KXZ-4o-vtt" userLabel="Song Controller" sceneMemberID="viewController">
+                <viewController id="KXZ-4o-vtt" userLabel="Song Controller" customClass="SongController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ySK-op-jPQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -560,6 +601,9 @@
                                     <constraint firstAttribute="width" constant="50" id="H5k-6l-0LQ"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="left-arrow"/>
+                                <connections>
+                                    <action selector="onBackButtonPressed:" destination="KXZ-4o-vtt" eventType="touchUpInside" id="c7G-Po-aj0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME OF SONG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H64-eV-lJ1">
                                 <rect key="frame" x="30" y="124" width="354" height="52"/>
@@ -567,20 +611,57 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME OF SINGER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hy-xk-S8k">
+                                <rect key="frame" x="87.5" y="186" width="239" height="33"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xbc-Po-cch" userLabel="songImage">
+                                <rect key="frame" x="10" y="239" width="394" height="613"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nDM-6j-cq3" firstAttribute="trailing" secondItem="Xbc-Po-cch" secondAttribute="trailing" constant="10" id="6ai-3j-SlC"/>
+                            <constraint firstItem="nDM-6j-cq3" firstAttribute="bottom" secondItem="Xbc-Po-cch" secondAttribute="bottom" constant="10" id="8RD-eb-ws1"/>
+                            <constraint firstItem="3hy-xk-S8k" firstAttribute="top" secondItem="H64-eV-lJ1" secondAttribute="bottom" constant="10" id="Gzz-Eg-TZW"/>
                             <constraint firstItem="OD5-cS-whf" firstAttribute="leading" secondItem="nDM-6j-cq3" secondAttribute="leading" constant="20" id="HCE-aG-gyn"/>
+                            <constraint firstItem="3hy-xk-S8k" firstAttribute="centerX" secondItem="ySK-op-jPQ" secondAttribute="centerX" id="PVQ-Z4-h56"/>
                             <constraint firstItem="H64-eV-lJ1" firstAttribute="centerX" secondItem="ySK-op-jPQ" secondAttribute="centerX" id="YrA-s2-kRh"/>
+                            <constraint firstItem="Xbc-Po-cch" firstAttribute="centerX" secondItem="ySK-op-jPQ" secondAttribute="centerX" id="Z2X-k1-5ha"/>
+                            <constraint firstItem="Xbc-Po-cch" firstAttribute="top" secondItem="3hy-xk-S8k" secondAttribute="bottom" constant="20" id="dDT-WB-ZVg"/>
                             <constraint firstItem="H64-eV-lJ1" firstAttribute="top" secondItem="OD5-cS-whf" secondAttribute="bottom" constant="20" id="dJR-ev-Nat"/>
+                            <constraint firstItem="Xbc-Po-cch" firstAttribute="leading" secondItem="nDM-6j-cq3" secondAttribute="leading" constant="10" id="qS7-9j-71l"/>
                             <constraint firstItem="OD5-cS-whf" firstAttribute="top" secondItem="nDM-6j-cq3" secondAttribute="top" constant="10" id="yKR-Nl-Kgl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nDM-6j-cq3"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="OD5-cS-whf" id="1Mj-qg-nkT"/>
+                        <outlet property="nameOfSingerLabel" destination="3hy-xk-S8k" id="hJT-FX-2Jf"/>
+                        <outlet property="nameOfSongLabel" destination="H64-eV-lJ1" id="mDZ-7j-MwY"/>
+                        <outlet property="songImage" destination="Xbc-Po-cch" id="wrr-wn-UUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuN-wE-GCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1809" y="858"/>
+        </scene>
+        <!--YouTube Controller-->
+        <scene sceneID="B9A-ru-wjc">
+            <objects>
+                <viewController id="jcT-4h-beg" userLabel="YouTube Controller" customClass="YouTubeController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jwF-Xw-ogt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="x7i-5N-xNm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cfz-P3-SxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2646" y="858"/>
         </scene>
     </scenes>
     <resources>
@@ -589,5 +670,9 @@
         <image name="music-file" width="64" height="64"/>
         <image name="settings" width="64" height="64"/>
         <image name="speaker" width="512" height="512"/>
+        <image name="youtube" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="d8m-ty-e72"/>
+    </inferredMetricsTieBreakers>
 </document>
