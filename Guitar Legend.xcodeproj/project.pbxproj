@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71C888C2492153800BAE73F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C888B2492153800BAE73F /* User.swift */; };
 		C72AE92524911C34009D6885 /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92424911C34009D6885 /* ChallengeModel.swift */; };
 		C72AE92724911DBF009D6885 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92624911DBF009D6885 /* Challenge.swift */; };
 		C72AE92924911DDA009D6885 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92824911DDA009D6885 /* Chord.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C71C888B2492153800BAE73F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C72AE92424911C34009D6885 /* ChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeModel.swift; sourceTree = "<group>"; };
 		C72AE92624911DBF009D6885 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		C72AE92824911DDA009D6885 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				C72AE92A24912523009D6885 /* ChallengesController.swift */,
 				C72AE92424911C34009D6885 /* ChallengeModel.swift */,
 				C72AE92D249126CD009D6885 /* ChallengeCollectionViewCell.swift */,
+				C71C888B2492153800BAE73F /* User.swift */,
 				C72AE92624911DBF009D6885 /* Challenge.swift */,
 				C72AE92824911DDA009D6885 /* Chord.swift */,
 				C761F7BF248F7CBC00F7BA46 /* Main.storyboard */,
@@ -158,6 +161,7 @@
 				C72AE92E249126CD009D6885 /* ChallengeCollectionViewCell.swift in Sources */,
 				C72AE92B24912523009D6885 /* ChallengesController.swift in Sources */,
 				C761F7BA248F7CBC00F7BA46 /* AppDelegate.swift in Sources */,
+				C71C888C2492153800BAE73F /* User.swift in Sources */,
 				C761F7BC248F7CBC00F7BA46 /* SceneDelegate.swift in Sources */,
 				C72AE92524911C34009D6885 /* ChallengeModel.swift in Sources */,
 				C72AE92724911DBF009D6885 /* Challenge.swift in Sources */,
