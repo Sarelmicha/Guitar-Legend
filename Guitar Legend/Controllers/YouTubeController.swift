@@ -16,7 +16,7 @@ class YouTubeController: UIViewController, YTPlayerViewDelegate{
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet var songNameLabel: UIView!
     var videoId : String!
-
+    
     @IBOutlet var singerNameLabel: UIView!
     
     
@@ -25,24 +25,24 @@ class YouTubeController: UIViewController, YTPlayerViewDelegate{
         playerView.delegate = self
         playerView.load(withVideoId: videoId, playerVars: ["playsinline" : 1])
         
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    
     @IBAction func onBackButtonPressed(_ sender: UIButton) {
         
         if let nav = self.navigationController {
-                   nav.popViewController(animated: true)
-               } else {
-                   self.dismiss(animated: true, completion: nil)
-               }
+            nav.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        
         
     }
     
@@ -50,5 +50,5 @@ class YouTubeController: UIViewController, YTPlayerViewDelegate{
         playerView.playVideo()
     }
     
-
+    
 }

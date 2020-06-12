@@ -25,16 +25,18 @@ class LessonController: UIViewController {
     var lessonModel : LessonModel!
     var selectedChord : Chord!
     var currentUser : User!
+    var soundManager : SoundManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lessonModel = LessonModel(chords: challenge.chords)
+        soundManager = SoundManager()
         
         lessonHeader.text = "LESSON \(challenge.numOfChallenge)"
         firstChordButton.titleLabel?.text = challenge.chords[0].name
         secondChordButton.titleLabel?.text = challenge.chords[1].name
-        songNameLabel.text = challenge.song.name
+        songNameLabel.text = "\(challenge.song.name) by \(challenge.song.singer)"
 
         
     }
@@ -73,6 +75,8 @@ class LessonController: UIViewController {
         currentUser.currentChallenge += 1
         
         //Make a Rock N Roll Sound!
+        
+        soundManager.playSound(soundFile : "next_challenge")
         
 //        onBackButtonPressed(sender)
         

@@ -17,12 +17,18 @@ class ChordController: UIViewController {
     @IBOutlet weak var chordImage: UIImageView!
     @IBOutlet weak var chordLabel: UILabel!
     var chord : Chord!
+    var soundManager : SoundManager!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        soundManager = SoundManager()
         
         chordLabel.text = "\(chord.name) CHORD"
+        chordImage.image = chord.chordImage
+        chordImage.layer.cornerRadius = 2.0
+        chordImage.clipsToBounds = true
+        
         
         
         // Do any additional setup after loading the view.
@@ -45,6 +51,8 @@ class ChordController: UIViewController {
     }
     
     @IBAction func onSoundButtonPressed(_ sender: UIButton) {
+        
+        soundManager.playSound(soundFile: chord.sound)
     }
     
     // MARK: - Navigation
