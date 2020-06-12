@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class ChallengesController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -78,7 +79,15 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
             
             
         } else {
-            //TODO - Pop up error message
+            
+            let appearance = SCLAlertView.SCLAppearance(
+                kTitleFont: UIFont(name: "Futura-Bold", size: 16)!,
+                kTextFont: UIFont(name: "Futura", size: 15)!,
+                kButtonFont: UIFont(name: "Futura", size: 15)!,
+                showCloseButton: true
+)
+            
+            SCLAlertView(appearance: appearance).showError("Challenge is locked!".uppercased(), subTitle: "Hey Legend!\n Please take previuse challenges")
         }
         
         

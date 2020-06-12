@@ -1,16 +1,20 @@
 PODS:
+  - SCLAlertView (0.8)
   - youtube-ios-player-helper (1.0.0)
 
 DEPENDENCIES:
+  - SCLAlertView
   - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
+    - SCLAlertView
     - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   youtube-ios-player-helper: 92407cb78e2d17976bdbf6d863b3e06faeab4549
 
-PODFILE CHECKSUM: 4ce599b10cfd84a494ab35b061c6cc372b956586
+PODFILE CHECKSUM: 7fa463f2672c855e0e08432daac2abc9ec75ad0a
 
 COCOAPODS: 1.9.1

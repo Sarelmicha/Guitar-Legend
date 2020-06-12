@@ -34,8 +34,11 @@ class LessonController: UIViewController {
         soundManager = SoundManager()
         
         lessonHeader.text = "LESSON \(challenge.numOfChallenge)"
-        firstChordButton.titleLabel?.text = challenge.chords[0].name
-        secondChordButton.titleLabel?.text = challenge.chords[1].name
+        print(challenge.chords[0].name)
+        print(challenge.chords[1].name)
+        firstChordButton.setTitle(challenge.chords[0].name, for: .normal)
+        secondChordButton.setTitle(challenge.chords[1].name, for: .normal)
+
         songNameLabel.text = "\(challenge.song.name) by \(challenge.song.singer)"
 
         
@@ -49,7 +52,10 @@ class LessonController: UIViewController {
     }
     @IBAction func onChordButtonPressed(_ sender: UIButton) {
         
+        print(sender.titleLabel!.text!)
+        
         selectedChord = lessonModel.checkSelectedChord(selectedChordName: sender.titleLabel!.text!)
+        print(selectedChord.name)
 
         self.performSegue(withIdentifier: "goToChordPage", sender: self)
         

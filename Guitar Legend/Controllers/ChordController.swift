@@ -24,7 +24,8 @@ class ChordController: UIViewController {
         super.viewDidLoad()
         soundManager = SoundManager()
         
-        chordLabel.text = "\(chord.name) CHORD"
+        
+        chordLabel.text = "\(chord.name)"
         chordImage.image = chord.chordImage
         chordImage.layer.cornerRadius = 2.0
         chordImage.clipsToBounds = true

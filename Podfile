@@ -8,5 +8,6 @@ target 'Guitar Legend' do
   # Pods for Guitar Legend
 
 pod 'youtube-ios-player-helper'
+pod 'SCLAlertView'
 
 end

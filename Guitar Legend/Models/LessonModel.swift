@@ -22,7 +22,7 @@ class LessonModel {
         
         for chord in chords {
             
-            if(chord.name == selectedChordName ){
+            if(chord.name.lowercased() == selectedChordName.lowercased() ){
                 return chord
             }
             
