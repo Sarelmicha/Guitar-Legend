@@ -181,6 +181,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="BbN-sT-6Pl" id="1zw-1x-r8L"/>
+                        <outlet property="headerLabel" destination="kA4-Ca-Egf" id="IB9-dX-jIA"/>
                         <segue destination="9CG-UW-oXg" kind="presentation" identifier="goToLessonPage" modalPresentationStyle="fullScreen" id="Scn-6W-WES"/>
                         <segue destination="ONh-dD-eLP" kind="presentation" identifier="goToSettingsPage" modalPresentationStyle="fullScreen" id="GyI-gS-KQq"/>
                     </connections>
@@ -275,7 +276,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-5q-ZHJ">
-                                <rect key="frame" x="55" y="853" width="304" height="34"/>
+                                <rect key="frame" x="55" y="789" width="304" height="34"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <state key="normal" title="I'M READY FOR MY NEXT CHALLENGE!">
                                     <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -285,17 +286,17 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hkk-q3-QuX">
-                                <rect key="frame" x="54" y="575" width="306" height="128"/>
+                                <rect key="frame" x="118" y="575" width="178" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yto-eh-Zty">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                         <state key="normal" backgroundImage="music-file"/>
                                         <connections>
                                             <action selector="onSongButtonPressed:" destination="9CG-UW-oXg" eventType="touchUpInside" id="SHC-BP-4Pc"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J4-46-UDM" userLabel="YouTube Button">
-                                        <rect key="frame" x="178" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="114" y="0.0" width="64" height="64"/>
                                         <state key="normal" backgroundImage="youtube"/>
                                         <connections>
                                             <action selector="onYouTubeButtonPressed:" destination="9CG-UW-oXg" eventType="touchUpInside" id="8Bj-Sq-xgM"/>
@@ -730,6 +731,7 @@
         <image name="youtube" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Scn-6W-WES"/>
         <segue reference="ozR-7f-VP2"/>
         <segue reference="R7u-52-lPQ"/>
     </inferredMetricsTieBreakers>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,16 @@
 		C71C88972492445F00BAE73F /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C88962492445F00BAE73F /* LessonModel.swift */; };
 		C71C88992492481F00BAE73F /* ChordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C88982492481F00BAE73F /* ChordController.swift */; };
 		C71C889B24924AA500BAE73F /* YouTubeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C889A24924AA500BAE73F /* YouTubeController.swift */; };
+		C71C88A62492751000BAE73F /* D.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C71C889D2492750F00BAE73F /* D.mp3 */; };
+		C71C88A72492751000BAE73F /* E.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C71C889E2492750F00BAE73F /* E.mp3 */; };
+		C71C88A82492751000BAE73F /* next_challenge.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C71C889F2492750F00BAE73F /* next_challenge.mp3 */; };
+		C71C88A92492751000BAE73F /* A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C71C88A02492751000BAE73F /* A.mp3 */; };
+		C71C88AA2492751000BAE73F /* C.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C71C88A12492751000BAE73F /* C.mp3 */; };
+		C71C88AB2492751000BAE73F /* Am.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C71C88A22492751000BAE73F /* Am.mp3 */; };
+		C71C88AC2492751000BAE73F /* F.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C71C88A32492751000BAE73F /* F.mp3 */; };
+		C71C88AD2492751000BAE73F /* G.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C71C88A42492751000BAE73F /* G.mp3 */; };
+		C71C88AE2492751000BAE73F /* Em.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C71C88A52492751000BAE73F /* Em.mp3 */; };
+		C71C88B02492754600BAE73F /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C88AF2492754600BAE73F /* SoundManager.swift */; };
 		C72AE92524911C34009D6885 /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92424911C34009D6885 /* ChallengeModel.swift */; };
 		C72AE92724911DBF009D6885 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92624911DBF009D6885 /* Challenge.swift */; };
 		C72AE92924911DDA009D6885 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92824911DDA009D6885 /* Chord.swift */; };
@@ -38,6 +48,16 @@
 		C71C88962492445F00BAE73F /* LessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonModel.swift; sourceTree = "<group>"; };
 		C71C88982492481F00BAE73F /* ChordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordController.swift; sourceTree = "<group>"; };
 		C71C889A24924AA500BAE73F /* YouTubeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeController.swift; sourceTree = "<group>"; };
+		C71C889D2492750F00BAE73F /* D.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = D.mp3; sourceTree = "<group>"; };
+		C71C889E2492750F00BAE73F /* E.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = E.mp3; sourceTree = "<group>"; };
+		C71C889F2492750F00BAE73F /* next_challenge.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = next_challenge.mp3; sourceTree = "<group>"; };
+		C71C88A02492751000BAE73F /* A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = A.mp3; sourceTree = "<group>"; };
+		C71C88A12492751000BAE73F /* C.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = C.mp3; sourceTree = "<group>"; };
+		C71C88A22492751000BAE73F /* Am.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Am.mp3; sourceTree = "<group>"; };
+		C71C88A32492751000BAE73F /* F.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = F.mp3; sourceTree = "<group>"; };
+		C71C88A42492751000BAE73F /* G.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = G.mp3; sourceTree = "<group>"; };
+		C71C88A52492751000BAE73F /* Em.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Em.mp3; sourceTree = "<group>"; };
+		C71C88AF2492754600BAE73F /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		C72AE92424911C34009D6885 /* ChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeModel.swift; sourceTree = "<group>"; };
 		C72AE92624911DBF009D6885 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		C72AE92824911DDA009D6885 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
@@ -72,7 +92,6 @@
 				FF7BB526901DEFA4BC0D287D /* Pods-Guitar Legend.debug.xcconfig */,
 				481DAF5B9A53D0C3A0F2BBCE /* Pods-Guitar Legend.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -113,8 +132,25 @@
 				C72AE92624911DBF009D6885 /* Challenge.swift */,
 				C72AE92824911DDA009D6885 /* Chord.swift */,
 				C71C88922492305C00BAE73F /* Song.swift */,
+				C71C88AF2492754600BAE73F /* SoundManager.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		C71C889C2492744A00BAE73F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C71C88A02492751000BAE73F /* A.mp3 */,
+				C71C88A22492751000BAE73F /* Am.mp3 */,
+				C71C88A12492751000BAE73F /* C.mp3 */,
+				C71C889D2492750F00BAE73F /* D.mp3 */,
+				C71C889E2492750F00BAE73F /* E.mp3 */,
+				C71C88A52492751000BAE73F /* Em.mp3 */,
+				C71C88A32492751000BAE73F /* F.mp3 */,
+				C71C88A42492751000BAE73F /* G.mp3 */,
+				C71C889F2492750F00BAE73F /* next_challenge.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		C761F7AD248F7CBC00F7BA46 = {
@@ -138,6 +174,7 @@
 		C761F7B8248F7CBC00F7BA46 /* Guitar Legend */ = {
 			isa = PBXGroup;
 			children = (
+				C71C889C2492744A00BAE73F /* Sounds */,
 				C71C888F24921A5000BAE73F /* Data */,
 				C71C888E24921A3500BAE73F /* Models */,
 				C71C888D24921A1800BAE73F /* Controllers */,
@@ -212,9 +249,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C71C88AD2492751000BAE73F /* G.mp3 in Resources */,
 				C761F7C6248F7CBE00F7BA46 /* LaunchScreen.storyboard in Resources */,
+				C71C88A92492751000BAE73F /* A.mp3 in Resources */,
 				C761F7C3248F7CBE00F7BA46 /* Assets.xcassets in Resources */,
 				C761F7C1248F7CBC00F7BA46 /* Main.storyboard in Resources */,
+				C71C88A62492751000BAE73F /* D.mp3 in Resources */,
+				C71C88AE2492751000BAE73F /* Em.mp3 in Resources */,
+				C71C88A72492751000BAE73F /* E.mp3 in Resources */,
+				C71C88AA2492751000BAE73F /* C.mp3 in Resources */,
+				C71C88AC2492751000BAE73F /* F.mp3 in Resources */,
+				C71C88A82492751000BAE73F /* next_challenge.mp3 in Resources */,
+				C71C88AB2492751000BAE73F /* Am.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71C889B24924AA500BAE73F /* YouTubeController.swift in Sources */,
+				C71C88B02492754600BAE73F /* SoundManager.swift in Sources */,
 				C72AE92924911DDA009D6885 /* Chord.swift in Sources */,
 				C761F7BE248F7CBC00F7BA46 /* LoginController.swift in Sources */,
 				C72AE92E249126CD009D6885 /* ChallengeCollectionViewCell.swift in Sources */,

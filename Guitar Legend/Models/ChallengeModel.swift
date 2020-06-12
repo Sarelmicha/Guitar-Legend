@@ -18,11 +18,30 @@ class ChallengeModel {
         self.currentUser = currentUser
     }
     
+    func setInfo(currentChallenge : Int) -> String? {
+        
+        
+        if(currentChallenge < 5) {
+            return "NOOBY"
+        } else if(currentChallenge < 10){
+            return "BABY STEP GUITARIEST"
+        } else if(currentChallenge < 15){
+            return "HALF WAY MAESTRO"
+        } else if(currentChallenge < 20){
+            return "BAD ASS PLAYER"
+        } else if(currentChallenge < 25){
+            return "YOU ARE LEGEND!"
+        }
+        else {
+            return nil
+        }
+    }
+    
     func getChallenges() -> [Challenge]{
         
         
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "fjuvLEvex4Q", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 1, songName: "IM YOURS",singer: "Jason Mars", songImage: #imageLiteral(resourceName: "logo"), songUrl: "qBzMhQUG0Rw")
+        createChallange(firstChordName: "C", firstChordSound: "C", firstChordImage: #imageLiteral(resourceName: "c-chord"), firstChordVideoId: "fjuvLEvex4Q", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "f-chord"), secondChordVideoId: "", numOfChallenge: 1, songName: "IM YOURS",singer: "Jason Mars", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "qBzMhQUG0Rw")
         
         
         

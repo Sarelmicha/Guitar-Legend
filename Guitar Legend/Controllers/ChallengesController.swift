@@ -10,6 +10,7 @@ import UIKit
 
 class ChallengesController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var headerLabel: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -21,12 +22,18 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         challengeModel = ChallengeModel(currentUser: currentUser)
         setCollectionView()
         
         // Call the getChallenges method of the challenge model
         challenges = challengeModel.getChallenges()
+        
+        headerLabel.text = challengeModel.setInfo(currentChallenge: currentUser.currentChallenge)
+        
     }
+    
+    
     
     
     func setCollectionView() {
