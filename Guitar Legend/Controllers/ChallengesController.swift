@@ -12,6 +12,7 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBOutlet weak var headerLabel: UILabel!
     
+    @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var currentUser : User!
@@ -35,6 +36,10 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     
     
     
+    @IBAction func onSettingsButtonPressed(_ sender: UIButton) {
+        
+           self.performSegue(withIdentifier: "goToSettingsPage", sender: self)
+    }
     
     func setCollectionView() {
         
@@ -92,6 +97,13 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
             
             lessonPage.challenge = pickedChallenge
             lessonPage.currentUser = currentUser
+             
+        } else if (segue.identifier == "goToSettingsPage") {
+            
+             let settingsPage = segue.destination as! SettingsController
+            
+            settingsPage.user = currentUser
+            
             
         }
         

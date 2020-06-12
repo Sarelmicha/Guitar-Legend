@@ -36,6 +36,7 @@
 		C761F7C1248F7CBC00F7BA46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761F7BF248F7CBC00F7BA46 /* Main.storyboard */; };
 		C761F7C3248F7CBE00F7BA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C761F7C2248F7CBE00F7BA46 /* Assets.xcassets */; };
 		C761F7C6248F7CBE00F7BA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761F7C4248F7CBE00F7BA46 /* LaunchScreen.storyboard */; };
+		C7EBE91D2493C0E70047EEB1 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		C761F7C2248F7CBE00F7BA46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C761F7C5248F7CBE00F7BA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C761F7C7248F7CBE00F7BA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		FF7BB526901DEFA4BC0D287D /* Pods-Guitar Legend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guitar Legend.debug.xcconfig"; path = "Target Support Files/Pods-Guitar Legend/Pods-Guitar Legend.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 				C71C88942492378300BAE73F /* SongController.swift */,
 				C71C88982492481F00BAE73F /* ChordController.swift */,
 				C71C889A24924AA500BAE73F /* YouTubeController.swift */,
+				C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				C71C889B24924AA500BAE73F /* YouTubeController.swift in Sources */,
 				C71C88B02492754600BAE73F /* SoundManager.swift in Sources */,
 				C72AE92924911DDA009D6885 /* Chord.swift in Sources */,
+				C7EBE91D2493C0E70047EEB1 /* SettingsController.swift in Sources */,
 				C761F7BE248F7CBC00F7BA46 /* LoginController.swift in Sources */,
 				C72AE92E249126CD009D6885 /* ChallengeCollectionViewCell.swift in Sources */,
 				C71C88972492445F00BAE73F /* LessonModel.swift in Sources */,

@@ -26,6 +26,9 @@ class ChordController: UIViewController {
         
         chordLabel.text = "\(chord.name) CHORD"
         chordImage.image = chord.chordImage
+        chordImage.layer.cornerRadius = 2.0
+        chordImage.clipsToBounds = true
+        
         
         
         // Do any additional setup after loading the view.
