@@ -35,7 +35,7 @@ class LoginController: UIViewController {
         if(segue.identifier == "goToChallengsPage"){
         
         let challengePage = segue.destination as! ChallengesController
-        challengePage.currentUser = User(id: 1, currentChallenge: 1)
+        challengePage.currentUser = User(uId: 1, currentChallenge: 1)
         } else if(segue.identifier == "goToSignupPage"){
             
             

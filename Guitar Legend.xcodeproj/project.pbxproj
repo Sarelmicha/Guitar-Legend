@@ -37,6 +37,10 @@
 		C761F7C3248F7CBE00F7BA46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C761F7C2248F7CBE00F7BA46 /* Assets.xcassets */; };
 		C761F7C6248F7CBE00F7BA46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C761F7C4248F7CBE00F7BA46 /* LaunchScreen.storyboard */; };
 		C7E48D342494DADE00B83153 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D332494DADE00B83153 /* SignupController.swift */; };
+		C7E48D372494EB5A00B83153 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D362494EB5A00B83153 /* Utilities.swift */; };
+		C7E48D392494ED8A00B83153 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E48D382494ED8A00B83153 /* GoogleService-Info.plist */; };
+		C7E48D3B2494F1B700B83153 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D3A2494F1B700B83153 /* FirebaseModel.swift */; };
+		C7E48D3D2494F3F200B83153 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D3C2494F3F200B83153 /* Validator.swift */; };
 		C7EBE91D2493C0E70047EEB1 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +78,10 @@
 		C761F7C5248F7CBE00F7BA46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C761F7C7248F7CBE00F7BA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7E48D332494DADE00B83153 /* SignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		C7E48D362494EB5A00B83153 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C7E48D382494ED8A00B83153 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C7E48D3A2494F1B700B83153 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
+		C7E48D3C2494F3F200B83153 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		FF7BB526901DEFA4BC0D287D /* Pods-Guitar Legend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guitar Legend.debug.xcconfig"; path = "Target Support Files/Pods-Guitar Legend/Pods-Guitar Legend.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +135,7 @@
 			children = (
 				C72AE92424911C34009D6885 /* ChallengeModel.swift */,
 				C71C88962492445F00BAE73F /* LessonModel.swift */,
+				C7E48D3A2494F1B700B83153 /* FirebaseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 		C761F7B8248F7CBC00F7BA46 /* Guitar Legend */ = {
 			isa = PBXGroup;
 			children = (
+				C7E48D352494EB4000B83153 /* Helpers */,
 				C71C889C2492744A00BAE73F /* Sounds */,
 				C71C888F24921A5000BAE73F /* Data */,
 				C71C888E24921A3500BAE73F /* Models */,
@@ -190,9 +200,19 @@
 				C761F7BF248F7CBC00F7BA46 /* Main.storyboard */,
 				C761F7C2248F7CBE00F7BA46 /* Assets.xcassets */,
 				C761F7C4248F7CBE00F7BA46 /* LaunchScreen.storyboard */,
+				C7E48D382494ED8A00B83153 /* GoogleService-Info.plist */,
 				C761F7C7248F7CBE00F7BA46 /* Info.plist */,
 			);
 			path = "Guitar Legend";
+			sourceTree = "<group>";
+		};
+		C7E48D352494EB4000B83153 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C7E48D362494EB5A00B83153 /* Utilities.swift */,
+				C7E48D3C2494F3F200B83153 /* Validator.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E48D392494ED8A00B83153 /* GoogleService-Info.plist in Resources */,
 				C71C88AD2492751000BAE73F /* G.mp3 in Resources */,
 				C761F7C6248F7CBE00F7BA46 /* LaunchScreen.storyboard in Resources */,
 				C71C88A92492751000BAE73F /* A.mp3 in Resources */,
@@ -323,6 +344,8 @@
 				C71C88B02492754600BAE73F /* SoundManager.swift in Sources */,
 				C72AE92924911DDA009D6885 /* Chord.swift in Sources */,
 				C7EBE91D2493C0E70047EEB1 /* SettingsController.swift in Sources */,
+				C7E48D3D2494F3F200B83153 /* Validator.swift in Sources */,
+				C7E48D3B2494F1B700B83153 /* FirebaseModel.swift in Sources */,
 				C761F7BE248F7CBC00F7BA46 /* LoginController.swift in Sources */,
 				C72AE92E249126CD009D6885 /* ChallengeCollectionViewCell.swift in Sources */,
 				C71C88972492445F00BAE73F /* LessonModel.swift in Sources */,
@@ -332,6 +355,7 @@
 				C71C88932492305C00BAE73F /* Song.swift in Sources */,
 				C71C88952492378300BAE73F /* SongController.swift in Sources */,
 				C71C889124921AC100BAE73F /* LessonController.swift in Sources */,
+				C7E48D372494EB5A00B83153 /* Utilities.swift in Sources */,
 				C71C888C2492153800BAE73F /* User.swift in Sources */,
 				C761F7BC248F7CBC00F7BA46 /* SceneDelegate.swift in Sources */,
 				C7E48D342494DADE00B83153 /* SignupController.swift in Sources */,

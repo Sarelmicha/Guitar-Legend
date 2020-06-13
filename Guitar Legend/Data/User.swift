@@ -12,12 +12,12 @@ import Foundation
 class User {
     
     
-    var id : Int
+    var uId : Int
     var currentChallenge : Int
     
-    init(id : Int, currentChallenge : Int) {
+    init(uId : Int, currentChallenge : Int) {
         
-        self.id = id
+        self.uId = uId
         self.currentChallenge = currentChallenge
         
     }

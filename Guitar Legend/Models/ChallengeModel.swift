@@ -12,7 +12,7 @@ import UIKit
 class ChallengeModel {
     
     var challenges = [Challenge]()
-    var currentUser : User = User(id : 1 , currentChallenge : 18)
+    var currentUser : User = User(uId : 1 , currentChallenge : 18)
     
     init(currentUser : User) {
         self.currentUser = currentUser

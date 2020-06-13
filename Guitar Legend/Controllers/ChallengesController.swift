@@ -80,14 +80,9 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
             
         } else {
             
-            let appearance = SCLAlertView.SCLAppearance(
-                kTitleFont: UIFont(name: "Futura-Bold", size: 16)!,
-                kTextFont: UIFont(name: "Futura", size: 15)!,
-                kButtonFont: UIFont(name: "Futura", size: 15)!,
-                showCloseButton: true
-)
+          //Create Error Message
             
-            SCLAlertView(appearance: appearance).showError("Challenge is locked!".uppercased(), subTitle: "Hey Legend!\n Please take previuse challenges")
+            Utilities.createErrorMessage(errorTitle: "Challenge is locked!", errorMessage: "Hey Legend!\n Please take previuse challenges")
         }
         
         

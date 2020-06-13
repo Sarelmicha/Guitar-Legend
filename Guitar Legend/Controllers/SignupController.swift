@@ -16,9 +16,12 @@ class SignupController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var firebaseModel : FirebaseModel!
     var newUser : User!
     override func viewDidLoad() {
         super.viewDidLoad()
+        firebaseModel = FirebaseModel()
         
         // Do any additional setup after loading the view.
     }
@@ -26,8 +29,20 @@ class SignupController: UIViewController {
     
     @IBAction func onSignupButtonPressed(_ sender: UIButton) {
         
-        //Create new user in firebase
-        newUser = User(id: 1, currentChallenge: 1)
+        //Validate the fields
+        let error =  Validator.validateFields(emailTextFieldText: emailTextField.text!, passwordTextFieldText: passwordTextField.text!)
+        
+        if(error != nil){
+            //There's somthing wrong with the fields, show error message
+            Utilities.createErrorMessage(errorTitle: "Error", errorMessage: error!)
+            return
+        }
+        
+        //Create new user
+        firebaseModel.signUp(email: emailTextField.text!, password: passwordTextField.text!)
+        newUser = User(uId: 1, currentChallenge: 1)
+        
+        //Navigate to challenges page
         
         self.performSegue(withIdentifier: "goToChallengesPage", sender: self)
     }

@@ -7,7 +7,13 @@ target 'Guitar Legend' do
 
   # Pods for Guitar Legend
 
-pod 'youtube-ios-player-helper'
-pod 'SCLAlertView'
+	pod 'youtube-ios-player-helper'
+	pod 'SCLAlertView'
+	pod 'Firebase/Analytics'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Core'
+	pod 'Firebase/Firestore'
+	pod 'FirebaseFirestoreSwift'	 	
+	
 
 end
