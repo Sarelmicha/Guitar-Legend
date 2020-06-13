@@ -9,22 +9,51 @@
 import UIKit
 
 class SignupController: UIViewController {
-
+    
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var passwordTextField: UITextField!
+    var newUser : User!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func onSignupButtonPressed(_ sender: UIButton) {
+        
+        //Create new user in firebase
+        newUser = User(id: 1, currentChallenge: 1)
+        
+        self.performSegue(withIdentifier: "goToChallengesPage", sender: self)
     }
-    */
-
+    
+    
+    @IBAction func onBackButtonPressed(_ sender: UIButton) {
+        
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if(segue.identifier == "goToChallengesPage") {
+            
+            let challengsPage = segue.destination as! ChallengesController
+            challengsPage.currentUser = newUser
+        }
+        
+    }
+    
+    
 }

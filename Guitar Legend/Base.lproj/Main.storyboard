@@ -73,6 +73,9 @@
                                 <state key="normal" title="Don't have an account? Sign up!">
                                     <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignupButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nT9-bD-hcK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -92,7 +95,8 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="GQc-yR-23N" id="8JA-zl-8xG"/>
-                        <segue destination="Yu6-0F-iQZ" kind="presentation" identifier="goToSignUpPage" modalPresentationStyle="fullScreen" id="gI4-sY-5gq"/>
+                        <outlet property="signupButton" destination="EYd-cN-0y8" id="Puq-7S-w1i"/>
+                        <segue destination="Yu6-0F-iQZ" kind="presentation" identifier="goToSignupPage" modalPresentationStyle="fullScreen" id="gI4-sY-5gq"/>
                         <segue destination="D9S-5X-eWM" kind="presentation" identifier="goToChallengsPage" modalPresentationStyle="fullScreen" id="Brn-pI-caZ"/>
                     </connections>
                 </viewController>
@@ -467,7 +471,7 @@
         <!--Signup Controller-->
         <scene sceneID="JqD-Ux-Zy1">
             <objects>
-                <viewController id="Yu6-0F-iQZ" userLabel="Signup Controller" sceneMemberID="viewController">
+                <viewController id="Yu6-0F-iQZ" userLabel="Signup Controller" customClass="SignupController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iFP-FB-drZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -519,7 +523,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="onSignupButtonPressed:" destination="Yu6-0F-iQZ" eventType="touchUpInside" id="gbd-Sz-WHE"/>
+                                    <action selector="onSignupButtonPressed:" destination="Yu6-0F-iQZ" eventType="touchUpInside" id="l8g-gd-RfI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAw-mW-MK8">
@@ -537,8 +541,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="left-arrow"/>
                                 <connections>
-                                    <action selector="onBackButtonPressed:" destination="Yu6-0F-iQZ" eventType="touchUpInside" id="Qi6-DY-9WK"/>
-                                    <action selector="onBackButtonPressed:" destination="ONh-dD-eLP" eventType="touchUpInside" id="Veb-Mu-X7B"/>
+                                    <action selector="onBackButtonPressed:" destination="Yu6-0F-iQZ" eventType="touchUpInside" id="c4a-qa-AuR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -560,10 +563,10 @@
                         <viewLayoutGuide key="safeArea" id="8VC-5e-Jfr"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="Qat-85-DY3" id="DjZ-1u-JJS"/>
-                        <outlet property="emailTextField" destination="x9b-Xh-c3R" id="CiO-fn-zai"/>
-                        <outlet property="passwordTextField" destination="sJw-7Y-nJG" id="Mbx-6S-gtR"/>
-                        <outlet property="signupButton" destination="Qat-85-DY3" id="VcP-vA-lld"/>
+                        <outlet property="backButton" destination="Ynt-9i-BW6" id="swn-sZ-B7z"/>
+                        <outlet property="emailTextField" destination="x9b-Xh-c3R" id="MEO-Jr-CMJ"/>
+                        <outlet property="passwordTextField" destination="sJw-7Y-nJG" id="RAk-rz-5rX"/>
+                        <outlet property="signupButton" destination="Qat-85-DY3" id="63Z-fc-QNx"/>
                         <segue destination="D9S-5X-eWM" kind="presentation" identifier="goToChallengesPage" id="p0L-f4-lbh"/>
                     </connections>
                 </viewController>
@@ -651,7 +654,6 @@
                         <outlet property="backButton" destination="gsH-WM-El2" id="jhJ-Wn-Ebf"/>
                         <outlet property="logoutButton" destination="mwG-yL-VdG" id="PS6-Pe-zTj"/>
                         <outlet property="resetButton" destination="YLu-XM-UNr" id="DII-1H-rbF"/>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToLoginPage" modalPresentationStyle="fullScreen" id="ze5-C6-hZN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8d-um-0sD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

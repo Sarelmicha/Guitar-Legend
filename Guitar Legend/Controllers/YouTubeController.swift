@@ -30,6 +30,10 @@ class YouTubeController: UIViewController, YTPlayerViewDelegate{
     }
     
     
+    @IBAction func onSigupButtonPressed(_ sender: UIButton) {
+        
+        
+    }
     @IBAction func onBackButtonPressed(_ sender: UIButton) {
         
         if let nav = self.navigationController {
