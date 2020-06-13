@@ -12,14 +12,19 @@ import Foundation
 class User {
     
     
-    var uId : Int
+    var uId : String
     var currentChallenge : Int
     
-    init(uId : Int, currentChallenge : Int) {
+    init(uId : String, currentChallenge : Int) {
         
         self.uId = uId
         self.currentChallenge = currentChallenge
         
+    }
+    
+    static func toUser(json: [String : Any]) ->User {
+        
+        return User(uId: json["uId"] as! String, currentChallenge: json["currentChallenge"] as! Int)
     }
     
     

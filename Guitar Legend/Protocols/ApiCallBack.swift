@@ -10,7 +10,9 @@ import Foundation
 
 protocol ApiCallBack {
     
-    func onSuccess(userUid: String)
+    func onCreateSuccess(userUid: String)
+    
+    func onReadSuccess(user : User)
     
     func onFailure(error: Error)
 }

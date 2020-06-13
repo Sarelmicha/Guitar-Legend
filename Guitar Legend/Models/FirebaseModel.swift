@@ -13,45 +13,42 @@ import FirebaseCore
 import FirebaseFirestore
 
 
-class FirebaseModel : CRUD {
+class FirebaseModel  {
     
-   
     
-    func create(emailText: String, passwordText: String, apiCallBack: ApiCallBack) {
-        signUp(emailText: emailText, passwordText : passwordText, apiCallBack : apiCallBack)
+    
+    func getUser(userUid: String, apiCallBack : ApiCallBack ){
+        
+        print("LALALALAL")
+        
+        print("id is \(userUid)")
+        
+        
+        let db = Firestore.firestore()
+        
+        // Get data
+        let docRef = db.collection("users").document(userUid)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let docData = document.data()
+                apiCallBack.onReadSuccess(user: User.toUser(json: docData!))
+                 
+                // Do something with doc data
+            } else {
+                print("Document does not exist")
+                
+            }
+        }
     }
     
-    func read(userUid: String) -> User? {
-           
-        let user = getUser(userUid : userUid)
-        
-        return user
-    }
-
     
-    func update() {
-        
-    }
-    
-    func delete() {
-        
-    }
-    
-    func getUser(userUid: String ) -> User?{
-        
-        return nil
-        
-    }
-    
-    
-
     func signUp(emailText : String, passwordText :String,apiCallBack : ApiCallBack) {
         
         
         //Create cleaned versions of the data
         let email = emailText.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordText.trimmingCharacters(in: .whitespacesAndNewlines)
-     
+        
         
         Auth.auth().createUser(withEmail: email, password: password)  {(result,err) in
             
@@ -63,22 +60,29 @@ class FirebaseModel : CRUD {
                 
             } else {
                 
-                 //User created seccessfully, not store id and the current challenge
+                //User created seccessfully, not store id and the current challenge
                 let db = Firestore.firestore()
                 
-                db.collection("users").addDocument(data: ["uId" : result!.user.uid,"currentChallenge" : 1]) {
+                db.collection("users").document(result!.user.uid).setData(
+                    ["uId" : result!.user.uid,
+                     "currentChallenge" : 5
+                ]) {
                     (error) in
                     
                     if(error != nil){
                         
                         //Show error Message
-                         apiCallBack.onFailure(error: error!)
+                        apiCallBack.onFailure(error: error!)
                     } else {
                         
-                        apiCallBack.onSuccess(userUid : (result?.user.uid)!)
+                        apiCallBack.onCreateSuccess(userUid : (result?.user.uid)!)
                     }
                 }
             }
         }
+        
     }
 }
+
+
+

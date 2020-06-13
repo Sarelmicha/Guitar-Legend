@@ -41,7 +41,6 @@
 		C7E48D392494ED8A00B83153 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E48D382494ED8A00B83153 /* GoogleService-Info.plist */; };
 		C7E48D3B2494F1B700B83153 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D3A2494F1B700B83153 /* FirebaseModel.swift */; };
 		C7E48D3D2494F3F200B83153 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D3C2494F3F200B83153 /* Validator.swift */; };
-		C7E48D402495291100B83153 /* CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D3F2495291100B83153 /* CRUD.swift */; };
 		C7E48D4224952A3E00B83153 /* ApiCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D4124952A3E00B83153 /* ApiCallBack.swift */; };
 		C7EBE91D2493C0E70047EEB1 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
@@ -84,7 +83,6 @@
 		C7E48D382494ED8A00B83153 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C7E48D3A2494F1B700B83153 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		C7E48D3C2494F3F200B83153 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		C7E48D3F2495291100B83153 /* CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUD.swift; sourceTree = "<group>"; };
 		C7E48D4124952A3E00B83153 /* ApiCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallBack.swift; sourceTree = "<group>"; };
 		C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		FF7BB526901DEFA4BC0D287D /* Pods-Guitar Legend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guitar Legend.debug.xcconfig"; path = "Target Support Files/Pods-Guitar Legend/Pods-Guitar Legend.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 		C7E48D3E2495285400B83153 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C7E48D3F2495291100B83153 /* CRUD.swift */,
 				C7E48D4124952A3E00B83153 /* ApiCallBack.swift */,
 			);
 			path = Protocols;
@@ -376,7 +373,6 @@
 				C7E48D342494DADE00B83153 /* SignupController.swift in Sources */,
 				C72AE92524911C34009D6885 /* ChallengeModel.swift in Sources */,
 				C72AE92724911DBF009D6885 /* Challenge.swift in Sources */,
-				C7E48D402495291100B83153 /* CRUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@
 import UIKit
 
 class SignupController: UIViewController , ApiCallBack{
+   
+    
     
     
     
@@ -68,14 +70,19 @@ class SignupController: UIViewController , ApiCallBack{
         
     }
     
-    func onSuccess(userUid : String) {
+    func onCreateSuccess(userUid : String) {
         
-        newUser = firebaseModel.read(userUid: userUid)
+        firebaseModel.getUser(userUid: userUid,apiCallBack: self)
         
-        //Navigate to challenges page               
-        self.performSegue(withIdentifier: "goToChallengesPage", sender: self)
+
 
     }
+    
+    func onReadSuccess(user: User) {
+           //Navigate to challenges page
+            newUser = user
+            self.performSegue(withIdentifier: "goToChallengesPage", sender: self)
+       }
     
     func onFailure(error: Error) {
         
