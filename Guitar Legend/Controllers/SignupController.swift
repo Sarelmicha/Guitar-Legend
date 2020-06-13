@@ -8,7 +8,9 @@
 
 import UIKit
 
-class SignupController: UIViewController {
+class SignupController: UIViewController , ApiCallBack{
+    
+    
     
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -39,12 +41,8 @@ class SignupController: UIViewController {
         }
         
         //Create new user
-        firebaseModel.signUp(email: emailTextField.text!, password: passwordTextField.text!)
-        newUser = User(uId: 1, currentChallenge: 1)
-        
-        //Navigate to challenges page
-        
-        self.performSegue(withIdentifier: "goToChallengesPage", sender: self)
+        firebaseModel.signUp(emailText: emailTextField.text!, passwordText: passwordTextField.text!,apiCallBack: self)
+    
     }
     
     
@@ -67,6 +65,22 @@ class SignupController: UIViewController {
             let challengsPage = segue.destination as! ChallengesController
             challengsPage.currentUser = newUser
         }
+        
+    }
+    
+    func onSuccess(userUid : String) {
+        
+        newUser = firebaseModel.read(userUid: userUid)
+        
+        //Navigate to challenges page               
+        self.performSegue(withIdentifier: "goToChallengesPage", sender: self)
+
+    }
+    
+    func onFailure(error: Error) {
+        
+        Utilities.createErrorMessage(errorTitle: "Error", errorMessage: error.localizedDescription)
+
         
     }
     
