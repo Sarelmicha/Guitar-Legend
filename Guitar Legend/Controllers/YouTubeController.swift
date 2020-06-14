@@ -16,24 +16,23 @@ class YouTubeController: UIViewController, YTPlayerViewDelegate{
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet var songNameLabel: UIView!
     var videoId : String!
-    
-    @IBOutlet var singerNameLabel: UIView!
-    
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initValues()
+        
+    }
+    
+    func initValues() {
+        
         playerView.delegate = self
         playerView.load(withVideoId: videoId, playerVars: ["playsinline" : 1])
         
-        
-        // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func onSigupButtonPressed(_ sender: UIButton) {
-        
-        
-    }
+
     @IBAction func onBackButtonPressed(_ sender: UIButton) {
         
         if let nav = self.navigationController {

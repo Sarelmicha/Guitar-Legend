@@ -31,18 +31,35 @@ class LessonController: UIViewController, UpdateApiCallBack {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initValues()
+        setInfo()
+
+        
+    }
+    
+    func initValues() {
+        
         firebaseModel = FirebaseModel()
         lessonModel = LessonModel(chords: challenge.chords)
         soundManager = SoundManager()
+        
+        
+    }
+    
+    func setInfo() {
         
         lessonHeader.text = "LESSON \(challenge.numOfChallenge)"
         print(challenge.chords[0].name)
         print(challenge.chords[1].name)
         firstChordButton.setTitle(challenge.chords[0].name, for: .normal)
         secondChordButton.setTitle(challenge.chords[1].name, for: .normal)
-
         songNameLabel.text = "\(challenge.song.name) by \(challenge.song.singer)"
-
+        
+        if(currentUser.currentChallenge == challenge.numOfChallenge){
+            nextChallengeButton.isHidden = false
+        } else {
+            nextChallengeButton.isHidden = true
+        }
         
     }
     
@@ -81,7 +98,7 @@ class LessonController: UIViewController, UpdateApiCallBack {
     @IBAction func onNextChallengeButtonPressed(_ sender: UIButton) {
         
         
-        firebaseModel.updateChallengeUser(userUid: currentUser.uId, currentChallenge: currentUser.currentChallenge, apiCallBack: self)
+        firebaseModel.updateChallengeUser(userUid: currentUser.uId, updatedChallenge: currentUser.currentChallenge + 1, apiCallBack: self)
         
     
     }

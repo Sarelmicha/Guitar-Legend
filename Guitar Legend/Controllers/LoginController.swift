@@ -22,9 +22,14 @@ class LoginController: UIViewController , SignInApiCallBack {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firebaseModel = FirebaseModel()
-        firebaseModel.autoSignIn(apiCallBack: self)
-        // Do any additional setup after loading the view.
+        initValues()
+       
+    }
+    
+    func initValues() {
+        
+         firebaseModel = FirebaseModel()
+        
     }
     
     
@@ -51,11 +56,11 @@ class LoginController: UIViewController , SignInApiCallBack {
         self.performSegue(withIdentifier: Finals.CHALLANGES_PAGE, sender: self)
     }
     
-    func onFailure(error: Error?, operation: Operation) {
+    func onFailure(error: Error?) {
         
-        if(operation == Operation.SignIn){
+       
         Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error!.localizedDescription)
-        }
+        
         
     }
     

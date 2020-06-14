@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bfz-YP-8Tl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,6 +8,49 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash Controller-->
+        <scene sceneID="Y0z-WZ-row">
+            <objects>
+                <viewController id="Bfz-YP-8Tl" userLabel="Splash Controller" customClass="SplashController" customModule="Guitar_Legend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nsf-b1-g3Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3VE-jj-lGp" userLabel="Logo Holder">
+                                <rect key="frame" x="56" y="338" width="302.5" height="220"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="p70-mm-sw9">
+                                        <rect key="frame" x="51" y="0.0" width="200" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="6yg-Z2-bCm"/>
+                                            <constraint firstAttribute="width" constant="200" id="kcz-u8-er1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guitar Legend" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6k-hf-VIL">
+                                        <rect key="frame" x="0.0" y="150" width="302.5" height="70"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="70"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3VE-jj-lGp" firstAttribute="centerX" secondItem="Nsf-b1-g3Z" secondAttribute="centerX" id="8pg-Zo-CFs"/>
+                            <constraint firstItem="3VE-jj-lGp" firstAttribute="centerY" secondItem="Nsf-b1-g3Z" secondAttribute="centerY" id="yE8-Yn-yVZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qbh-X1-lBr"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToLoginPage" modalPresentationStyle="fullScreen" id="9xH-G3-ovl"/>
+                        <segue destination="D9S-5X-eWM" kind="presentation" identifier="goToChallengesPage" modalPresentationStyle="fullScreen" id="G41-E6-ncC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3C5-Xc-wLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-619" y="139"/>
+        </scene>
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -657,6 +700,7 @@
                         <outlet property="logoutButton" destination="mwG-yL-VdG" id="PS6-Pe-zTj"/>
                         <outlet property="resetButton" destination="YLu-XM-UNr" id="DII-1H-rbF"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToLoginPage" modalPresentationStyle="fullScreen" id="uDC-uS-Djd"/>
+                        <segue destination="D9S-5X-eWM" kind="presentation" identifier="goToChallengesPage" modalPresentationStyle="fullScreen" id="UOZ-wQ-VYR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8d-um-0sD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -814,7 +858,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="d8m-ty-e72"/>
-        <segue reference="R7u-52-lPQ"/>
+        <segue reference="UOZ-wQ-VYR"/>
+        <segue reference="9xH-G3-ovl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="left-arrow" width="512" height="512"/>

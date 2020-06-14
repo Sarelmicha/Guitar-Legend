@@ -22,17 +22,28 @@ class ChordController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initValues()
+        setInfo()
+        
+        
+        
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    func initValues() {
+        
         soundManager = SoundManager()
         
+    }
+    
+    func setInfo() {
         
         chordLabel.text = "\(chord.name)"
         chordImage.image = chord.chordImage
         chordImage.layer.cornerRadius = 2.0
         chordImage.clipsToBounds = true
-        
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     

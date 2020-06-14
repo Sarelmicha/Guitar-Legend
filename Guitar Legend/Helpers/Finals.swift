@@ -22,8 +22,9 @@ class Finals {
     static let LESSON_PAGE : String = "goToLessonPage"
     static let ERROR : String = "Error"
     static let CELL_ID : String = "ChallengeCell"
-    static let LOCK_CHALLANGE_TITLE = "Challenge is locked!"
-    static let LOCK_CHALLANGE_DESCRIPTION = "Hey Legend!\n Please take previuse challenges"
+    static let LOCK_CHALLANGE_TITLE : String = "Challenge is locked!"
+    static let LOCK_CHALLANGE_DESCRIPTION : String = "Hey Legend!\n Please take previuse challenges"
+    static let FIRST_CHALLENGE : Int = 1
    
     
     

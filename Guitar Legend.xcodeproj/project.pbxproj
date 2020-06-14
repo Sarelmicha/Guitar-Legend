@@ -46,7 +46,7 @@
 		C7F2B948249620CA00D47127 /* LogoutApiCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2B947249620CA00D47127 /* LogoutApiCallBack.swift */; };
 		C7F2B94A249627A500D47127 /* UpdateApiCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2B949249627A500D47127 /* UpdateApiCallBack.swift */; };
 		C7F2B94E24962E6800D47127 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7F2B94D24962E6800D47127 /* GoogleService-Info.plist */; };
-		C7F2B9522496301E00D47127 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2B9512496301E00D47127 /* Operation.swift */; };
+		C7F2B9542496371A00D47127 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2B9532496371A00D47127 /* SplashController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,7 +92,7 @@
 		C7F2B947249620CA00D47127 /* LogoutApiCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutApiCallBack.swift; sourceTree = "<group>"; };
 		C7F2B949249627A500D47127 /* UpdateApiCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateApiCallBack.swift; sourceTree = "<group>"; };
 		C7F2B94D24962E6800D47127 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C7F2B9512496301E00D47127 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		C7F2B9532496371A00D47127 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		FF7BB526901DEFA4BC0D287D /* Pods-Guitar Legend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guitar Legend.debug.xcconfig"; path = "Target Support Files/Pods-Guitar Legend/Pods-Guitar Legend.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +136,7 @@
 				C71C889A24924AA500BAE73F /* YouTubeController.swift */,
 				C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */,
 				C7E48D332494DADE00B83153 /* SignupController.swift */,
+				C7F2B9532496371A00D47127 /* SplashController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,7 +224,6 @@
 				C7E48D362494EB5A00B83153 /* Utilities.swift */,
 				C7E48D3C2494F3F200B83153 /* Validator.swift */,
 				C7F2B94524961BCD00D47127 /* Finals.swift */,
-				C7F2B9512496301E00D47127 /* Operation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -386,9 +386,9 @@
 				C7F2B948249620CA00D47127 /* LogoutApiCallBack.swift in Sources */,
 				C761F7BC248F7CBC00F7BA46 /* SceneDelegate.swift in Sources */,
 				C7E48D342494DADE00B83153 /* SignupController.swift in Sources */,
-				C7F2B9522496301E00D47127 /* Operation.swift in Sources */,
 				C72AE92524911C34009D6885 /* ChallengeModel.swift in Sources */,
 				C72AE92724911DBF009D6885 /* Challenge.swift in Sources */,
+				C7F2B9542496371A00D47127 /* SplashController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

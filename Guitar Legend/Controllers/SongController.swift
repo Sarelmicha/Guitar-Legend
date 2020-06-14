@@ -21,7 +21,11 @@ class SongController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        setInfo()
         
+    }
+    
+    func setInfo() {
         nameOfSongLabel.text = song.name
         nameOfSingerLabel.text = song.singer
         songImage.image = song.image

@@ -38,7 +38,7 @@ class FirebaseModel  {
         Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
             if (err != nil) {
                 //Could not sign in
-                apiCallBack.onFailure(error: err!,operation: Operation.SignIn)
+                apiCallBack.onFailure(error: err!)
             } else {
                 
                 apiCallBack.onSignInSuccess(userUid: (result?.user.uid)!)
@@ -84,14 +84,13 @@ class FirebaseModel  {
         }
     }
     
-    func updateChallengeUser(userUid: String,currentChallenge : Int, apiCallBack : UpdateApiCallBack ) {
+    func updateChallengeUser(userUid: String,updatedChallenge : Int, apiCallBack : UpdateApiCallBack ) {
         
         
-        let newCurrectChallenge = currentChallenge + 1
         let db = Firestore.firestore()
         
         db.collection("users").document(userUid).updateData(
-        ["currentChallenge" : newCurrectChallenge]) {(err) in
+        ["currentChallenge" : updatedChallenge]) {(err) in
             
             
             //Check for errors
@@ -116,7 +115,7 @@ class FirebaseModel  {
         if (currentUser != nil) {
             apiCallBack.onSignInSuccess(userUid: currentUser!.uid)
         } else {
-            apiCallBack.onFailure(error: nil, operation: Operation.AutoSignIn)
+            apiCallBack.onFailure(error: nil)
         }
     }
     
@@ -144,7 +143,7 @@ class FirebaseModel  {
             if (err != nil) {
                 
                 // There was an error creating the user
-                apiCallBack.onFailure(error: err!,operation: Operation.SignIn)
+                apiCallBack.onFailure(error: err!)
                 
             } else {
                 
@@ -160,7 +159,7 @@ class FirebaseModel  {
                     if(error != nil){
                         
                         //Show error Message
-                        apiCallBack.onFailure(error: error!,operation: Operation.SignIn)
+                        apiCallBack.onFailure(error: error!)
                     } else {
                         
                         apiCallBack.onSignInSuccess(userUid : (result?.user.uid)!)

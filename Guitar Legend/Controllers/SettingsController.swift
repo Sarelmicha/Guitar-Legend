@@ -9,21 +9,30 @@
 import UIKit
 import SCLAlertView
 
-class SettingsController: UIViewController ,LogoutApiCallBack{
-    
-    
+class SettingsController: UIViewController ,LogoutApiCallBack, UpdateApiCallBack{
     
     
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
+    
     var firebaseModel : FirebaseModel!
     var user : User!
+    var resetHasBeenClicked : Bool!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initValues()
+        
+    }
+    
+    func initValues() {
+        
         firebaseModel = FirebaseModel()
+        resetHasBeenClicked = false
+        
         
     }
     
@@ -38,14 +47,23 @@ class SettingsController: UIViewController ,LogoutApiCallBack{
         
         let alert = SCLAlertView().showWarning("Hello Warning", subTitle: "This is a more descriptive warning text.")
         
-        user.currentChallenge = 1
+        firebaseModel.updateChallengeUser(userUid: user.uId, updatedChallenge: Finals.FIRST_CHALLENGE, apiCallBack: self)
+        
+        
     }
     @IBAction func onBackButtonPressed(_ sender: UIButton) {
         
-        if let nav = self.navigationController {
-            nav.popViewController(animated: true)
-        } else {
-            self.dismiss(animated: true, completion: nil)
+        if(resetHasBeenClicked){
+            
+            self.performSegue(withIdentifier: Finals.CHALLANGES_PAGE, sender: self)
+            
+        }else {
+            
+            if let nav = self.navigationController {
+                nav.popViewController(animated: true)
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     
@@ -60,6 +78,14 @@ class SettingsController: UIViewController ,LogoutApiCallBack{
         Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error.localizedDescription)
     }
     
+    func onUpdateSuccess() {
+        
+        //Update the user localy
+        user.currentChallenge = 1
+        resetHasBeenClicked = true
+        
+    }
+    
     
     // MARK: - Navigation
     
@@ -68,6 +94,12 @@ class SettingsController: UIViewController ,LogoutApiCallBack{
         if(segue.identifier == Finals.LOGIN_PAGE){
             
             _ = segue.destination as! LoginController
+        }
+        
+        if(segue.identifier == Finals.CHALLANGES_PAGE){
+            
+            let challangesPage = segue.destination as! ChallengesController
+            challangesPage.currentUser = user
         }
         
     }

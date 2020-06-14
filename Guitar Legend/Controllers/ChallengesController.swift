@@ -25,14 +25,26 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
         super.viewDidLoad()
         
         
+        initValues()
+        setInfo()
+        
+        
+    }
+    
+    func initValues() {
+        
         challengeModel = ChallengeModel(currentUser: currentUser)
         setCollectionView()
         
         // Call the getChallenges method of the challenge model
         challenges = challengeModel.getChallenges()
         
-        headerLabel.text = challengeModel.setInfo(currentChallenge: currentUser.currentChallenge)
+    }
+    
+    func setInfo() {
         
+        headerLabel.text = challengeModel.setInfo(currentChallenge: currentUser.currentChallenge)
+
     }
     
     
@@ -95,18 +107,21 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if(segue.identifier == "goToLessonPage"){
+        if(segue.identifier == Finals.LESSON_PAGE){
             
             let lessonPage = segue.destination as! LessonController
             
             lessonPage.challenge = pickedChallenge
             lessonPage.currentUser = currentUser
              
-        } else if (segue.identifier == "goToSettingsPage") {
+        } else if (segue.identifier == Finals.SETTINGS_PAGE) {
+            
             
              let settingsPage = segue.destination as! SettingsController
             
             settingsPage.user = currentUser
+            
+            
             
             
         }

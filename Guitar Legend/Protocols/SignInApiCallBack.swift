@@ -15,5 +15,5 @@ protocol SignInApiCallBack {
     
     func onGetUserSuccess(user : User)
     
-    func onFailure(error: Error?, operation : Operation)
+    func onFailure(error: Error?)
 }
