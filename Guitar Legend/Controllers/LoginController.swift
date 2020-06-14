@@ -8,12 +8,21 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class LoginController: UIViewController , SignInApiCallBack {
+    
+    
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    var firebaseModel : FirebaseModel!
+    var currentUser : User!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        firebaseModel = FirebaseModel()
         // Do any additional setup after loading the view.
     }
     
@@ -21,30 +30,47 @@ class LoginController: UIViewController {
     
     @IBAction func onSignupButtonPressed(_ sender: UIButton) {
         
-         self.performSegue(withIdentifier: "goToSignupPage", sender: self)
+        self.performSegue(withIdentifier: Finals.SIGNUP_PAGE, sender: self)
     }
     @IBAction func onLoginButtonPressed(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: "goToChallengsPage", sender: self)
+        firebaseModel.login(emailText: emailTextField.text!, passwordText: passwordTextField.text!, apiCallBack: self)
+        
+    }
+    
+    func onSignInSuccess(userUid: String) {
+        firebaseModel.getUser(userUid: userUid,apiCallBack: self)
+        
+    }
+    
+    func onGetUserSuccess(user: User) {
+        
+        //Navigate to challenges page
+        currentUser = user
+        self.performSegue(withIdentifier: Finals.CHALLANGES_PAGE, sender: self)
+    }
+    
+    func onFailure(error: Error) {
+        
+        Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error.localizedDescription)
+        
     }
     
     //MARK: - Navigation
-       
-       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if(segue.identifier == "goToChallengsPage"){
-        
-        let challengePage = segue.destination as! ChallengesController
-        challengePage.currentUser = User(uId: "1", currentChallenge: 1)
-        } else if(segue.identifier == "goToSignupPage"){
+        if(segue.identifier == Finals.CHALLANGES_PAGE){
             
-            
+            let challengePage = segue.destination as! ChallengesController
+            challengePage.currentUser = currentUser
+        } else if(segue.identifier == Finals.SIGNUP_PAGE){
             
             _ = segue.destination as! SignupController
         }
-            
-       }
-
-
+        
+    }
+    
+    
 }
 

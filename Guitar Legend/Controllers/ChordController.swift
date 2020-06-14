@@ -47,7 +47,7 @@ class ChordController: UIViewController {
     
     @IBAction func onYouTubeButtonPressed(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: "goToYouTubePage", sender: self)
+        self.performSegue(withIdentifier: Finals.YOUTUBE_PAGE, sender: self)
         
     }
     
@@ -60,7 +60,7 @@ class ChordController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if(segue.identifier == "goToYouTubePage"){
+        if(segue.identifier == Finals.YOUTUBE_PAGE){
             
             let youTubePage = segue.destination as! YouTubeController
             youTubePage.videoId = chord.chordVideoId

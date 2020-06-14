@@ -9,23 +9,29 @@
 import UIKit
 import SCLAlertView
 
-class SettingsController: UIViewController {
+class SettingsController: UIViewController ,LogoutApiCallBack{
+    
+    
+    
     
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
+    var firebaseModel : FirebaseModel!
     var user : User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        firebaseModel = FirebaseModel()
         
     }
     
     
     @IBAction func onLogoutButtonPressed(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: "goToLoginPage", sender: self)
+        firebaseModel.logout(apiCallBack: self)
+        
     }
     
     @IBAction func onResetButtonPressed(_ sender: UIButton) {
@@ -42,11 +48,24 @@ class SettingsController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
+    
+    func onLogoutSuccess() {
+        
+        
+        self.performSegue(withIdentifier: Finals.LOGIN_PAGE, sender: self)
+    }
+    
+    func onFailure(error: Error) {
+        
+        Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error.localizedDescription)
+    }
+    
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if(segue.identifier == "goToLoginPage"){
+        if(segue.identifier == Finals.LOGIN_PAGE){
             
             _ = segue.destination as! LoginController
         }

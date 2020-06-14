@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol ApiCallBack {
+protocol SignInApiCallBack {
     
-    func onCreateSuccess(userUid: String)
+    func onSignInSuccess(userUid: String)
     
-    func onReadSuccess(user : User)
+    func onGetUserSuccess(user : User)
     
     func onFailure(error: Error)
 }

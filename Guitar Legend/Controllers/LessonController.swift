@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LessonController: UIViewController {
+class LessonController: UIViewController, UpdateApiCallBack {
     
     @IBOutlet weak var lessonHeader: UILabel!
 
@@ -26,10 +26,12 @@ class LessonController: UIViewController {
     var selectedChord : Chord!
     var currentUser : User!
     var soundManager : SoundManager!
+    var firebaseModel : FirebaseModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        firebaseModel = FirebaseModel()
         lessonModel = LessonModel(chords: challenge.chords)
         soundManager = SoundManager()
         
@@ -47,7 +49,7 @@ class LessonController: UIViewController {
     
     @IBAction func onYouTubeButtonPressed(_ sender: UIButton) {
         
-         self.performSegue(withIdentifier: "goToYouTubePage", sender: self)
+        self.performSegue(withIdentifier: Finals.YOUTUBE_PAGE, sender: self)
         
     }
     @IBAction func onChordButtonPressed(_ sender: UIButton) {
@@ -57,12 +59,12 @@ class LessonController: UIViewController {
         selectedChord = lessonModel.checkSelectedChord(selectedChordName: sender.titleLabel!.text!)
         print(selectedChord.name)
 
-        self.performSegue(withIdentifier: "goToChordPage", sender: self)
+        self.performSegue(withIdentifier: Finals.CHORD_PAGE, sender: self)
         
     }
     @IBAction func onSongButtonPressed(_ sender: UIButton) {
         
-         self.performSegue(withIdentifier: "goToSongPage", sender: self)
+        self.performSegue(withIdentifier: Finals.SONG_PAGE, sender: self)
         
     }
     
@@ -78,35 +80,47 @@ class LessonController: UIViewController {
     
     @IBAction func onNextChallengeButtonPressed(_ sender: UIButton) {
         
+        
+        firebaseModel.updateChallengeUser(userUid: currentUser.uId, currentChallenge: currentUser.currentChallenge, apiCallBack: self)
+        
+    
+    }
+    
+    func onUpdateSuccess() {
+        
+        
+        //Update user localy
         currentUser.currentChallenge += 1
         
         //Make a Rock N Roll Sound!
-        
         soundManager.playSound(soundFile : "next_challenge")
         
-//        onBackButtonPressed(sender)
         
-        self.performSegue(withIdentifier: "goToChallengesPage", sender: self)
-
-    }
+        self.performSegue(withIdentifier: Finals.CHALLANGES_PAGE, sender: self)
+              
+          }
+          
+          func onFailure(error: Error) {
+            Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error.localizedDescription)
+          }
     
      //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-         if(segue.identifier == "goToSongPage"){
+        if(segue.identifier == Finals.SONG_PAGE){
             
         let songPage = segue.destination as! SongController
             songPage.song = challenge.song
             
-         } else if(segue.identifier == "goToChordPage") {
+        } else if(segue.identifier == Finals.CHORD_PAGE) {
             
             let chordPage = segue.destination as! ChordController
             chordPage.chord = selectedChord
-         } else if(segue.identifier == "goToYouTubePage") {
+        } else if(segue.identifier == Finals.YOUTUBE_PAGE) {
             
             let youTubePage = segue.destination as! YouTubeController
             youTubePage.videoId = challenge.song.songVideoId
-        } else if(segue.identifier == "goToChallengesPage") {
+        } else if(segue.identifier == Finals.CHALLANGES_PAGE) {
             
             let challengesPage = segue.destination as! ChallengesController
             challengesPage.currentUser = currentUser

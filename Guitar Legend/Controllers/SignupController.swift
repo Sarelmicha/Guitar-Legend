@@ -8,13 +8,10 @@
 
 import UIKit
 
-class SignupController: UIViewController , ApiCallBack{
-   
+class SignupController: UIViewController , SignInApiCallBack{
     
     
-    
-    
-    
+
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var backButton: UIButton!
@@ -33,14 +30,7 @@ class SignupController: UIViewController , ApiCallBack{
     
     @IBAction func onSignupButtonPressed(_ sender: UIButton) {
         
-        //Validate the fields
-        let error =  Validator.validateFields(emailTextFieldText: emailTextField.text!, passwordTextFieldText: passwordTextField.text!)
-        
-        if(error != nil){
-            //There's somthing wrong with the fields, show error message
-            Utilities.createErrorMessage(errorTitle: "Error", errorMessage: error!)
-            return
-        }
+       
         
         //Create new user
         firebaseModel.signUp(emailText: emailTextField.text!, passwordText: passwordTextField.text!,apiCallBack: self)
@@ -62,31 +52,29 @@ class SignupController: UIViewController , ApiCallBack{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         
-        if(segue.identifier == "goToChallengesPage") {
+        if(segue.identifier == Finals.CHALLANGES_PAGE) {
             
             let challengsPage = segue.destination as! ChallengesController
             challengsPage.currentUser = newUser
         }
         
     }
+
     
-    func onCreateSuccess(userUid : String) {
+    func onSignInSuccess(userUid: String) {
         
         firebaseModel.getUser(userUid: userUid,apiCallBack: self)
-        
-
-
     }
     
-    func onReadSuccess(user: User) {
+    func onGetUserSuccess(user: User) {
            //Navigate to challenges page
             newUser = user
-            self.performSegue(withIdentifier: "goToChallengesPage", sender: self)
+        self.performSegue(withIdentifier: Finals.CHALLANGES_PAGE, sender: self)
        }
     
     func onFailure(error: Error) {
         
-        Utilities.createErrorMessage(errorTitle: "Error", errorMessage: error.localizedDescription)
+        Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error.localizedDescription)
 
         
     }

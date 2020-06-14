@@ -9,10 +9,10 @@
 import UIKit
 import SCLAlertView
 
-class ChallengesController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+class ChallengesController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+   
+
     @IBOutlet weak var headerLabel: UILabel!
-    
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -39,7 +39,7 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBAction func onSettingsButtonPressed(_ sender: UIButton) {
         
-           self.performSegue(withIdentifier: "goToSettingsPage", sender: self)
+        self.performSegue(withIdentifier: Finals.SETTINGS_PAGE, sender: self)
     }
     
     func setCollectionView() {
@@ -58,7 +58,7 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChallengeCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Finals.CELL_ID, for: indexPath)
             as! ChallengeCollectionViewCell
         
         cell.setChallege(challege: challenges[indexPath.row])
@@ -75,21 +75,21 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
         
         if(pickedChallenge.numOfChallenge <= currentUser.currentChallenge){
                     
-            self.performSegue(withIdentifier: "goToLessonPage", sender: self)
+            self.performSegue(withIdentifier: Finals.LESSON_PAGE, sender: self)
             
             
         } else {
             
           //Create Error Message
             
-            Utilities.createErrorMessage(errorTitle: "Challenge is locked!", errorMessage: "Hey Legend!\n Please take previuse challenges")
+            Utilities.createErrorMessage(errorTitle: Finals.LOCK_CHALLANGE_TITLE, errorMessage: Finals.LOCK_CHALLANGE_DESCRIPTION)
         }
         
         
         
     }
-    
-    
+
+
     
     //MARK: - Navigation
     
