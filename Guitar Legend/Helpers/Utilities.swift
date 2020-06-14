@@ -25,6 +25,6 @@ class Utilities {
         SCLAlertView(appearance: appearance).showError(errorTitle.uppercased(), subTitle:errorMessage)
         
     }
-    
-    
+
+
 }

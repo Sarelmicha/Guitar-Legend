@@ -13,18 +13,33 @@ class SignupController: UIViewController , SignInApiCallBack{
     
 
     @IBOutlet weak var emailTextField: UITextField!
-    
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
-    @IBOutlet weak var passwordTextField: UITextField!
+    
     
     var firebaseModel : FirebaseModel!
     var newUser : User!
     override func viewDidLoad() {
         super.viewDidLoad()
-        firebaseModel = FirebaseModel()
         
-        // Do any additional setup after loading the view.
+        initValues()
+        setInfo()
+        
+    }
+    
+    func initValues() {
+        
+        firebaseModel = FirebaseModel()
+
+    }
+    
+    func setInfo() {
+        
+         emailTextField.attributedPlaceholder = NSAttributedString(string: Finals.EMAIL_HINT,
+                                    attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+               passwordTextField.attributedPlaceholder = NSAttributedString(string: Finals.PASSWORD_HINT,
+               attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
     }
     
     

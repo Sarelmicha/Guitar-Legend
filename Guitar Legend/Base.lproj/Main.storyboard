@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3C5-Xc-wLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-619" y="139"/>
+            <point key="canvasLocation" x="-670" y="138"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -90,7 +90,10 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUm-b8-6ep">
                                         <rect key="frame" x="0.0" y="70" width="280" height="50"/>
                                         <color key="backgroundColor" red="0.45098039215686275" green="0.99215686274509807" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" hint="Email"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Password">
+                                            <accessibilityTraits key="traits" none="YES"/>
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="280" id="Lfi-Px-DfV"/>
                                             <constraint firstAttribute="height" constant="50" id="iVZ-2J-155"/>
@@ -158,11 +161,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU ARE A LEGEND!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-Ca-Egf">
-                                <rect key="frame" x="50" y="114" width="314" height="50"/>
+                                <rect key="frame" x="15.5" y="114" width="383.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UNb-Ad-had"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -334,9 +337,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-5q-ZHJ">
-                                <rect key="frame" x="55" y="696" width="304" height="34"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
-                                <state key="normal" title="I'M READY FOR MY NEXT CHALLENGE!">
+                                <rect key="frame" x="44" y="696" width="326" height="41"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                <state key="normal" title="I'm ready for my next challenge!">
                                     <color key="titleColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -857,8 +860,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d8m-ty-e72"/>
-        <segue reference="UOZ-wQ-VYR"/>
+        <segue reference="ozR-7f-VP2"/>
+        <segue reference="G41-E6-ncC"/>
         <segue reference="9xH-G3-ovl"/>
     </inferredMetricsTieBreakers>
     <resources>

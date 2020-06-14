@@ -24,7 +24,10 @@ class Finals {
     static let CELL_ID : String = "ChallengeCell"
     static let LOCK_CHALLANGE_TITLE : String = "Challenge is locked!"
     static let LOCK_CHALLANGE_DESCRIPTION : String = "Hey Legend!\n Please take previuse challenges"
+    static let EMAIL_HINT : String = "Email"
+    static let PASSWORD_HINT : String = "Password"
     static let FIRST_CHALLENGE : Int = 1
+    static let MAX_CHALLENGE : Int = 20
    
     
     

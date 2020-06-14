@@ -23,13 +23,23 @@ class LoginController: UIViewController , SignInApiCallBack {
     override func viewDidLoad() {
         super.viewDidLoad()
         initValues()
+        setInfo()
        
     }
     
     func initValues() {
         
-         firebaseModel = FirebaseModel()
+        firebaseModel = FirebaseModel()
         
+        
+    }
+    
+    func setInfo() {
+        
+        emailTextField.attributedPlaceholder = NSAttributedString(string: Finals.EMAIL_HINT,
+                             attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: Finals.PASSWORD_HINT,
+        attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
     }
     
     

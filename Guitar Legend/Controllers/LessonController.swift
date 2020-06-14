@@ -57,7 +57,7 @@ class LessonController: UIViewController, UpdateApiCallBack {
         
         if(currentUser.currentChallenge == challenge.numOfChallenge){
             nextChallengeButton.isHidden = false
-        } else {
+        } else if(currentUser.currentChallenge > challenge.numOfChallenge || challenge.numOfChallenge == Finals.MAX_CHALLENGE){
             nextChallengeButton.isHidden = true
         }
         

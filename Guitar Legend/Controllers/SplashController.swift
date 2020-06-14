@@ -21,9 +21,14 @@ class SplashController: UIViewController, SignInApiCallBack {
         initValues()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        firebaseModel.autoSignIn(apiCallBack: self)
+
+    }
+    
+    
     func initValues() {
         firebaseModel = FirebaseModel()
-        firebaseModel.autoSignIn(apiCallBack: self)
     }
     
     func onSignInSuccess(userUid: String) {
@@ -31,12 +36,15 @@ class SplashController: UIViewController, SignInApiCallBack {
     }
     
     func onGetUserSuccess(user: User) {
+        print("autologin success")
         //Navigate to challenges page
         currentUser = user
         self.performSegue(withIdentifier: Finals.CHALLANGES_PAGE, sender: self)
     }
     
     func onFailure(error: Error?) {
+        
+        print("autologin failed")
         
         self.performSegue(withIdentifier: Finals.LOGIN_PAGE, sender: self)
         

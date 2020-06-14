@@ -45,13 +45,17 @@ class SettingsController: UIViewController ,LogoutApiCallBack, UpdateApiCallBack
     
     @IBAction func onResetButtonPressed(_ sender: UIButton) {
         
-        let alert = SCLAlertView().showWarning("Hello Warning", subTitle: "This is a more descriptive warning text.")
         
         firebaseModel.updateChallengeUser(userUid: user.uId, updatedChallenge: Finals.FIRST_CHALLENGE, apiCallBack: self)
         
         
     }
     @IBAction func onBackButtonPressed(_ sender: UIButton) {
+        
+        navigate()
+    }
+    
+    func navigate(){
         
         if(resetHasBeenClicked){
             
@@ -65,6 +69,7 @@ class SettingsController: UIViewController ,LogoutApiCallBack, UpdateApiCallBack
                 self.dismiss(animated: true, completion: nil)
             }
         }
+        
     }
     
     func onLogoutSuccess() {
@@ -83,6 +88,7 @@ class SettingsController: UIViewController ,LogoutApiCallBack, UpdateApiCallBack
         //Update the user localy
         user.currentChallenge = 1
         resetHasBeenClicked = true
+        navigate()
         
     }
     
