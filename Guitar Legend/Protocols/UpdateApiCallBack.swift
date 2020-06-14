@@ -11,6 +11,8 @@ import Foundation
 
 protocol UpdateApiCallBack {
     
+    //Update callbacks
+    
     func onUpdateSuccess()
     
     func onFailure(error: Error)

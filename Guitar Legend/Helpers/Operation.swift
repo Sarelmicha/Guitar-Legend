@@ -1,5 +1,5 @@
 //
-//  LogoutApiCallBack.swift
+//  Operation.swift
 //  Guitar Legend
 //
 //  Created by user167401 on 6/14/20.
@@ -8,12 +8,9 @@
 
 import Foundation
 
-
-protocol LogoutApiCallBack {
+enum Operation {
     
-    //Logout Callbacks
+    case SignIn
     
-    func onLogoutSuccess()
-    
-    func onFailure(error: Error)
+    case AutoSignIn
 }

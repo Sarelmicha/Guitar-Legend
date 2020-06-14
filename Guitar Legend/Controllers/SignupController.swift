@@ -11,6 +11,8 @@ import UIKit
 class SignupController: UIViewController , SignInApiCallBack{
     
     
+    
+    
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -72,12 +74,11 @@ class SignupController: UIViewController , SignInApiCallBack{
         self.performSegue(withIdentifier: Finals.CHALLANGES_PAGE, sender: self)
        }
     
-    func onFailure(error: Error) {
+    func onFailure(error: Error?, operation : Operation) {
         
-        Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error.localizedDescription)
-
-        
+        if(operation == Operation.SignIn){
+            Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error!.localizedDescription)
+        }
     }
-    
-    
+
 }

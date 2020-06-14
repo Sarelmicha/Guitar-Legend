@@ -10,9 +10,10 @@ import Foundation
 
 protocol SignInApiCallBack {
     
+    //Signup call backs
     func onSignInSuccess(userUid: String)
     
     func onGetUserSuccess(user : User)
     
-    func onFailure(error: Error)
+    func onFailure(error: Error?, operation : Operation)
 }

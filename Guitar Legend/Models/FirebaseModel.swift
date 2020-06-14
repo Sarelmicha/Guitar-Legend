@@ -38,7 +38,7 @@ class FirebaseModel  {
         Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
             if (err != nil) {
                 //Could not sign in
-                apiCallBack.onFailure(error: err!)
+                apiCallBack.onFailure(error: err!,operation: Operation.SignIn)
             } else {
                 
                 apiCallBack.onSignInSuccess(userUid: (result?.user.uid)!)
@@ -109,6 +109,18 @@ class FirebaseModel  {
     }
     
     
+    func autoSignIn(apiCallBack : SignInApiCallBack) {
+        
+        let currentUser = Auth.auth().currentUser
+        
+        if (currentUser != nil) {
+            apiCallBack.onSignInSuccess(userUid: currentUser!.uid)
+        } else {
+            apiCallBack.onFailure(error: nil, operation: Operation.AutoSignIn)
+        }
+    }
+    
+    
     func signUp(emailText : String, passwordText :String,apiCallBack : SignInApiCallBack) {
         
         //Validate the fields
@@ -132,7 +144,7 @@ class FirebaseModel  {
             if (err != nil) {
                 
                 // There was an error creating the user
-                apiCallBack.onFailure(error: err!)
+                apiCallBack.onFailure(error: err!,operation: Operation.SignIn)
                 
             } else {
                 
@@ -148,7 +160,7 @@ class FirebaseModel  {
                     if(error != nil){
                         
                         //Show error Message
-                        apiCallBack.onFailure(error: error!)
+                        apiCallBack.onFailure(error: error!,operation: Operation.SignIn)
                     } else {
                         
                         apiCallBack.onSignInSuccess(userUid : (result?.user.uid)!)

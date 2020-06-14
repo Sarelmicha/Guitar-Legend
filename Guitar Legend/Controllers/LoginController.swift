@@ -10,7 +10,7 @@ import UIKit
 
 class LoginController: UIViewController , SignInApiCallBack {
     
-    
+
     
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
@@ -23,6 +23,7 @@ class LoginController: UIViewController , SignInApiCallBack {
     override func viewDidLoad() {
         super.viewDidLoad()
         firebaseModel = FirebaseModel()
+        firebaseModel.autoSignIn(apiCallBack: self)
         // Do any additional setup after loading the view.
     }
     
@@ -50,9 +51,11 @@ class LoginController: UIViewController , SignInApiCallBack {
         self.performSegue(withIdentifier: Finals.CHALLANGES_PAGE, sender: self)
     }
     
-    func onFailure(error: Error) {
+    func onFailure(error: Error?, operation: Operation) {
         
-        Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error.localizedDescription)
+        if(operation == Operation.SignIn){
+        Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error!.localizedDescription)
+        }
         
     }
     
