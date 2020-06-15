@@ -40,7 +40,7 @@ class ChordController: UIViewController {
     
     func setInfo() {
         
-        chordLabel.text = "\(chord.name)"
+        chordLabel.text = "\(chord.name) Chord"
         chordImage.image = chord.chordImage
         chordImage.layer.cornerRadius = 2.0
         chordImage.clipsToBounds = true
