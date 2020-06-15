@@ -24,5 +24,10 @@ class Song {
         self.songVideoId = songUrl
     }
     
+    static func toSong(json: [String : Any]) ->Song {
+        
+        return Song(name: json["name"] as! String, singer: json["singer"] as! String, image: #imageLiteral(resourceName: "music-file"),songUrl: json["songVideoId"] as! String)
+    }
+    
     
 }

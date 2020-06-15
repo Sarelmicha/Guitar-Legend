@@ -78,10 +78,30 @@ class FirebaseModel  {
                 
                 // Do something with doc data
             } else {
-                print("Document does not exist")
+                apiCallBack.onFailure(error: error)
                 
             }
         }
+    }
+    
+    func getDailyChallenge(apiCallBack: DailyChallengeApiCallBack) {
+        
+        let db = Firestore.firestore()
+        
+        // Get data
+        let docRef = db.collection(Finals.CHALLENGES_COLLECTION).document(Finals.DAILY_CHALLENGE_DOCUMENT_ID)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let docData = document.data()
+                
+                apiCallBack.onGetDailyChallengeSuccess(song: Song.toSong(json: docData!))
+                
+                // Do something with doc data
+            } else {
+                apiCallBack.onFailure(error: error)
+            }
+        }
+        
     }
     
     func updateChallengeUser(userUid: String,updatedChallenge : Int, apiCallBack : UpdateApiCallBack ) {
@@ -89,7 +109,7 @@ class FirebaseModel  {
         
         let db = Firestore.firestore()
         
-        db.collection("users").document(userUid).updateData(
+        db.collection(Finals.USER_COLLECTION).document(userUid).updateData(
         ["currentChallenge" : updatedChallenge]) {(err) in
             
             

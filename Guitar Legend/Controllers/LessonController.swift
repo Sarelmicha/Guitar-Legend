@@ -117,8 +117,8 @@ class LessonController: UIViewController, UpdateApiCallBack {
               
           }
           
-          func onFailure(error: Error) {
-            Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error.localizedDescription)
+          func onFailure(error: Error?) {
+            Utilities.createErrorMessage(errorTitle: Finals.ERROR, errorMessage: error!.localizedDescription)
           }
     
      //MARK: - Navigation
@@ -137,6 +137,8 @@ class LessonController: UIViewController, UpdateApiCallBack {
             
             let youTubePage = segue.destination as! YouTubeController
             youTubePage.videoId = challenge.song.songVideoId
+            youTubePage.header = challenge.song.name
+            youTubePage.footer = challenge.song.singer
         } else if(segue.identifier == Finals.CHALLANGES_PAGE) {
             
             let challengesPage = segue.destination as! ChallengesController

@@ -15,5 +15,5 @@ protocol LogoutApiCallBack {
     
     func onLogoutSuccess()
     
-    func onFailure(error: Error)
+    func onFailure(error: Error?)
 }

@@ -30,6 +30,7 @@
 		C72AE92924911DDA009D6885 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92824911DDA009D6885 /* Chord.swift */; };
 		C72AE92B24912523009D6885 /* ChallengesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92A24912523009D6885 /* ChallengesController.swift */; };
 		C72AE92E249126CD009D6885 /* ChallengeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AE92D249126CD009D6885 /* ChallengeCollectionViewCell.swift */; };
+		C73C98772497A209007ACD1B /* DailyChallengeApiCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C98762497A209007ACD1B /* DailyChallengeApiCallBack.swift */; };
 		C761F7BA248F7CBC00F7BA46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761F7B9248F7CBC00F7BA46 /* AppDelegate.swift */; };
 		C761F7BC248F7CBC00F7BA46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761F7BB248F7CBC00F7BA46 /* SceneDelegate.swift */; };
 		C761F7BE248F7CBC00F7BA46 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C761F7BD248F7CBC00F7BA46 /* LoginController.swift */; };
@@ -41,7 +42,7 @@
 		C7E48D3B2494F1B700B83153 /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D3A2494F1B700B83153 /* FirebaseModel.swift */; };
 		C7E48D3D2494F3F200B83153 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D3C2494F3F200B83153 /* Validator.swift */; };
 		C7E48D4224952A3E00B83153 /* SignInApiCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E48D4124952A3E00B83153 /* SignInApiCallBack.swift */; };
-		C7EBE91D2493C0E70047EEB1 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */; };
+		C7EBE91D2493C0E70047EEB1 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EBE91C2493C0E70047EEB1 /* MenuController.swift */; };
 		C7F2B94624961BCD00D47127 /* Finals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2B94524961BCD00D47127 /* Finals.swift */; };
 		C7F2B948249620CA00D47127 /* LogoutApiCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2B947249620CA00D47127 /* LogoutApiCallBack.swift */; };
 		C7F2B94A249627A500D47127 /* UpdateApiCallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F2B949249627A500D47127 /* UpdateApiCallBack.swift */; };
@@ -74,6 +75,7 @@
 		C72AE92824911DDA009D6885 /* Chord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chord.swift; sourceTree = "<group>"; };
 		C72AE92A24912523009D6885 /* ChallengesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesController.swift; sourceTree = "<group>"; };
 		C72AE92D249126CD009D6885 /* ChallengeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C73C98762497A209007ACD1B /* DailyChallengeApiCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChallengeApiCallBack.swift; sourceTree = "<group>"; };
 		C761F7B6248F7CBC00F7BA46 /* Guitar Legend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guitar Legend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C761F7B9248F7CBC00F7BA46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C761F7BB248F7CBC00F7BA46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		C7E48D3A2494F1B700B83153 /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		C7E48D3C2494F3F200B83153 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		C7E48D4124952A3E00B83153 /* SignInApiCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApiCallBack.swift; sourceTree = "<group>"; };
-		C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		C7EBE91C2493C0E70047EEB1 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		C7F2B94524961BCD00D47127 /* Finals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finals.swift; sourceTree = "<group>"; };
 		C7F2B947249620CA00D47127 /* LogoutApiCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutApiCallBack.swift; sourceTree = "<group>"; };
 		C7F2B949249627A500D47127 /* UpdateApiCallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateApiCallBack.swift; sourceTree = "<group>"; };
@@ -134,7 +136,7 @@
 				C71C88942492378300BAE73F /* SongController.swift */,
 				C71C88982492481F00BAE73F /* ChordController.swift */,
 				C71C889A24924AA500BAE73F /* YouTubeController.swift */,
-				C7EBE91C2493C0E70047EEB1 /* SettingsController.swift */,
+				C7EBE91C2493C0E70047EEB1 /* MenuController.swift */,
 				C7E48D332494DADE00B83153 /* SignupController.swift */,
 				C7F2B9532496371A00D47127 /* SplashController.swift */,
 			);
@@ -234,6 +236,7 @@
 				C7E48D4124952A3E00B83153 /* SignInApiCallBack.swift */,
 				C7F2B947249620CA00D47127 /* LogoutApiCallBack.swift */,
 				C7F2B949249627A500D47127 /* UpdateApiCallBack.swift */,
+				C73C98762497A209007ACD1B /* DailyChallengeApiCallBack.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -364,9 +367,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C71C889B24924AA500BAE73F /* YouTubeController.swift in Sources */,
+				C73C98772497A209007ACD1B /* DailyChallengeApiCallBack.swift in Sources */,
 				C71C88B02492754600BAE73F /* SoundManager.swift in Sources */,
 				C72AE92924911DDA009D6885 /* Chord.swift in Sources */,
-				C7EBE91D2493C0E70047EEB1 /* SettingsController.swift in Sources */,
+				C7EBE91D2493C0E70047EEB1 /* MenuController.swift in Sources */,
 				C7E48D3D2494F3F200B83153 /* Validator.swift in Sources */,
 				C7F2B94624961BCD00D47127 /* Finals.swift in Sources */,
 				C7E48D4224952A3E00B83153 /* SignInApiCallBack.swift in Sources */,

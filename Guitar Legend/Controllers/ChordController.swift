@@ -40,7 +40,7 @@ class ChordController: UIViewController {
     
     func setInfo() {
         
-        chordLabel.text = "\(chord.name) Chord"
+        chordLabel.text = "\(chord.name) CHORD"
         chordImage.image = chord.chordImage
         chordImage.layer.cornerRadius = 2.0
         chordImage.clipsToBounds = true
@@ -75,6 +75,8 @@ class ChordController: UIViewController {
             
             let youTubePage = segue.destination as! YouTubeController
             youTubePage.videoId = chord.chordVideoId
+            youTubePage.header = "\(chord.name) CHORD"
+            youTubePage.footer = ""
             
         }
         

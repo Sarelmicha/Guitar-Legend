@@ -117,7 +117,7 @@ class ChallengesController: UIViewController, UICollectionViewDelegate, UICollec
         } else if (segue.identifier == Finals.SETTINGS_PAGE) {
             
             
-             let settingsPage = segue.destination as! SettingsController
+             let settingsPage = segue.destination as! MenuController
             
             settingsPage.user = currentUser
             

@@ -13,15 +13,28 @@ class YouTubeController: UIViewController, YTPlayerViewDelegate{
     
     @IBOutlet var playerView : YTPlayerView!
     
+    @IBOutlet weak var nameOfSongLabel: UILabel!
+    @IBOutlet weak var nameOfSingerLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet var songNameLabel: UIView!
     var videoId : String!
+    var header : String!
+    var footer : String!
         
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         initValues()
+        setInfo()
+        
+    }
+    
+    func setInfo() {
+        
+        nameOfSongLabel.text = header
+        nameOfSingerLabel.text = footer
         
     }
     

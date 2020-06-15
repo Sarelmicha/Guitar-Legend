@@ -15,5 +15,5 @@ protocol UpdateApiCallBack {
     
     func onUpdateSuccess()
     
-    func onFailure(error: Error)
+    func onFailure(error: Error?)
 }

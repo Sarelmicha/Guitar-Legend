@@ -28,6 +28,10 @@ class Finals {
     static let PASSWORD_HINT : String = "Password"
     static let FIRST_CHALLENGE : Int = 1
     static let MAX_CHALLENGE : Int = 20
+    static let DAILY_CHALLENGE_DOCUMENT_ID : String = "dailyChallenge"
+    static let USER_COLLECTION : String = "users"
+    static let CHALLENGES_COLLECTION : String = "challenges"
+    
    
     
     
