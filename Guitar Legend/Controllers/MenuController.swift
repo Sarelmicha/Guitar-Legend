@@ -17,7 +17,6 @@ class MenuController: UIViewController ,LogoutApiCallBack, UpdateApiCallBack, Da
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
-    
     @IBOutlet weak var dailyChallengeButton: UIButton!
     
     var firebaseModel : FirebaseModel!
@@ -60,6 +59,8 @@ class MenuController: UIViewController ,LogoutApiCallBack, UpdateApiCallBack, Da
     }
     
     @IBAction func onDailyChallengeButtonPressed(_ sender: UIButton) {
+        
+        print("dailly pressed")
         
         firebaseModel.getDailyChallenge(apiCallBack: self)
     }
