@@ -56,12 +56,12 @@ class ChallengeModel {
         createChallange(firstChordName: "F", firstChordSound: "F", firstChordImage: #imageLiteral(resourceName: "f-chord.jpg"), firstChordVideoId: "aqH9HNrAveg", secondChordName: "B", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "b-chord.png"), secondChordVideoId: "B6xbJazlViE", numOfChallenge: 5, songName: "Hallelujah",singer: "Leonard Cohen", songImage: #imageLiteral(resourceName: "Hellulja.png"), songUrl: "DZCyaEU0Dnk")
         
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 6, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "Cm", firstChordSound: "C", firstChordImage: #imageLiteral(resourceName: "cm-chord.jpg"), firstChordVideoId: "g98I8NgiBhc", secondChordName: "Gm", secondChordSound: "G", secondChordImage: #imageLiteral(resourceName: "gm-chord.jpg"), secondChordVideoId: "Dik_vY51WeA", numOfChallenge: 6, songName: "Family Affair",singer: "Mary J Blige", songImage: #imageLiteral(resourceName: "FamilyAffair.png"), songUrl: "7ODLjkaTEZs")
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 7, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "Fm", firstChordSound: "F", firstChordImage: #imageLiteral(resourceName: "fm-chord.jpg"), firstChordVideoId: "wv0R-HJ9UFk", secondChordName: "Bm", secondChordSound: "B", secondChordImage: #imageLiteral(resourceName: "bm-chord.jpg"), secondChordVideoId: "suJnbc2TERU", numOfChallenge: 7, songName: "Just The Way You Are",singer: "Bruno Mars", songImage: #imageLiteral(resourceName: "just the way you are.jpg"), songUrl: "cN18XJFDqL8")
         
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 8, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "F#m", firstChordSound: "F", firstChordImage: #imageLiteral(resourceName: "f#m-chord.jpg"), firstChordVideoId: "xquzbT9mdVU", secondChordName: "Eb", secondChordSound: "E", secondChordImage: #imageLiteral(resourceName: "eb-chord.jpg"), secondChordVideoId: "Xs_AgIhBRvI", numOfChallenge: 8, songName: "Hotel California",singer: "Eagles", songImage: #imageLiteral(resourceName: "hotel_california.png"), songUrl: "iRrsZ45PpDg")
         
         
         
