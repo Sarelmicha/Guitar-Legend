@@ -63,39 +63,36 @@ class ChallengeModel {
         
         createChallange(firstChordName: "F#m", firstChordSound: "F", firstChordImage: #imageLiteral(resourceName: "f#m-chord.jpg"), firstChordVideoId: "xquzbT9mdVU", secondChordName: "Eb", secondChordSound: "E", secondChordImage: #imageLiteral(resourceName: "eb-chord.jpg"), secondChordVideoId: "Xs_AgIhBRvI", numOfChallenge: 8, songName: "Hotel California",singer: "Eagles", songImage: #imageLiteral(resourceName: "hotel_california.png"), songUrl: "iRrsZ45PpDg")
         
+        createChallange(firstChordName: "F", firstChordSound: "F", firstChordImage: #imageLiteral(resourceName: "f-chord.jpg"), firstChordVideoId: "aqH9HNrAveg", secondChordName: "B", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "b-chord.png"), secondChordVideoId: "B6xbJazlViE", numOfChallenge: 9, songName: "Hallelujah",singer: "Leonard Cohen", songImage: #imageLiteral(resourceName: "Hellulja.png"), songUrl: "DZCyaEU0Dnk")
         
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 9, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "Cm", firstChordSound: "C", firstChordImage: #imageLiteral(resourceName: "cm-chord.jpg"), firstChordVideoId: "g98I8NgiBhc", secondChordName: "Gm", secondChordSound: "G", secondChordImage: #imageLiteral(resourceName: "gm-chord.jpg"), secondChordVideoId: "Dik_vY51WeA", numOfChallenge: 10, songName: "Family Affair",singer: "Mary J Blige", songImage: #imageLiteral(resourceName: "FamilyAffair.png"), songUrl: "7ODLjkaTEZs")
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 10, songName: "BAL BLA",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
-        
-        
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 11, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "C", firstChordSound: "C", firstChordImage: #imageLiteral(resourceName: "c-chord.jpg"), firstChordVideoId: "RBYqdBqogo4", secondChordName: "Am", secondChordSound: "Am", secondChordImage: #imageLiteral(resourceName: "am-chord.jpg"), secondChordVideoId: "kV_EABwevy4", numOfChallenge: 11, songName: "Knockin' On Heaven's Door",singer: "Guns N' Roses", songImage: #imageLiteral(resourceName: "knockingOnHeavnesDoor.png"), songUrl: "MLPdY20CvjQ")
         
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 12, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "Em", firstChordSound: "Em", firstChordImage: #imageLiteral(resourceName: "em-chord.jpg"), firstChordVideoId: "Hfm4-yOI6oA", secondChordName: "Dm", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "dm-chord.jpg"), secondChordVideoId: "EovReq8aAgU", numOfChallenge: 12, songName: "Ain't no sunshine",singer: "Bill Withers", songImage: #imageLiteral(resourceName: "AintNoSunshine.png"), songUrl: "-gwze2B_juE")
         
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 13, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "F", firstChordSound: "F", firstChordImage: #imageLiteral(resourceName: "f-chord.jpg"), firstChordVideoId: "aqH9HNrAveg", secondChordName: "B", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "b-chord.png"), secondChordVideoId: "B6xbJazlViE", numOfChallenge: 13, songName: "Hallelujah",singer: "Leonard Cohen", songImage: #imageLiteral(resourceName: "Hellulja.png"), songUrl: "DZCyaEU0Dnk")
+        
+        createChallange(firstChordName: "F", firstChordSound: "F", firstChordImage: #imageLiteral(resourceName: "f-chord.jpg"), firstChordVideoId: "aqH9HNrAveg", secondChordName: "B", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "b-chord.png"), secondChordVideoId: "B6xbJazlViE", numOfChallenge: 14, songName: "Hallelujah",singer: "Leonard Cohen", songImage: #imageLiteral(resourceName: "Hellulja.png"), songUrl: "DZCyaEU0Dnk")
         
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 14, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "Cm", firstChordSound: "C", firstChordImage: #imageLiteral(resourceName: "cm-chord.jpg"), firstChordVideoId: "g98I8NgiBhc", secondChordName: "Gm", secondChordSound: "G", secondChordImage: #imageLiteral(resourceName: "gm-chord.jpg"), secondChordVideoId: "Dik_vY51WeA", numOfChallenge: 15, songName: "Family Affair",singer: "Mary J Blige", songImage: #imageLiteral(resourceName: "FamilyAffair.png"), songUrl: "7ODLjkaTEZs")
+        
+        createChallange(firstChordName: "Cm", firstChordSound: "C", firstChordImage: #imageLiteral(resourceName: "cm-chord.jpg"), firstChordVideoId: "g98I8NgiBhc", secondChordName: "Gm", secondChordSound: "G", secondChordImage: #imageLiteral(resourceName: "gm-chord.jpg"), secondChordVideoId: "Dik_vY51WeA", numOfChallenge: 16, songName: "Family Affair",singer: "Mary J Blige", songImage: #imageLiteral(resourceName: "FamilyAffair.png"), songUrl: "7ODLjkaTEZs")
+        
+        createChallange(firstChordName: "C", firstChordSound: "C", firstChordImage: #imageLiteral(resourceName: "c-chord.jpg"), firstChordVideoId: "RBYqdBqogo4", secondChordName: "Am", secondChordSound: "Am", secondChordImage: #imageLiteral(resourceName: "am-chord.jpg"), secondChordVideoId: "kV_EABwevy4", numOfChallenge: 17, songName: "Knockin' On Heaven's Door",singer: "Guns N' Roses", songImage: #imageLiteral(resourceName: "knockingOnHeavnesDoor.png"), songUrl: "MLPdY20CvjQ")
         
         
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 15, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "Em", firstChordSound: "Em", firstChordImage: #imageLiteral(resourceName: "em-chord.jpg"), firstChordVideoId: "Hfm4-yOI6oA", secondChordName: "Dm", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "dm-chord.jpg"), secondChordVideoId: "EovReq8aAgU", numOfChallenge: 18, songName: "Ain't no sunshine",singer: "Bill Withers", songImage: #imageLiteral(resourceName: "AintNoSunshine.png"), songUrl: "-gwze2B_juE")
         
-        
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 16, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
-        
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 17, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
-        
-        
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 18, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
-        
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 19, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
-        
-        
-        createChallange(firstChordName: "C", firstChordSound: "", firstChordImage: #imageLiteral(resourceName: "logo"), firstChordVideoId: "", secondChordName: "G", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "left-arrow"), secondChordVideoId: "", numOfChallenge: 20, songName: "",singer: "", songImage: #imageLiteral(resourceName: "speaker"), songUrl: "")
+        createChallange(firstChordName: "Em", firstChordSound: "Em", firstChordImage: #imageLiteral(resourceName: "em-chord.jpg"), firstChordVideoId: "Hfm4-yOI6oA", secondChordName: "Dm", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "dm-chord.jpg"), secondChordVideoId: "EovReq8aAgU", numOfChallenge: 19, songName: "Ain't no sunshine",singer: "Bill Withers", songImage: #imageLiteral(resourceName: "AintNoSunshine.png"), songUrl: "-gwze2B_juE")
+               
+               
+               createChallange(firstChordName: "F", firstChordSound: "F", firstChordImage: #imageLiteral(resourceName: "f-chord.jpg"), firstChordVideoId: "aqH9HNrAveg", secondChordName: "B", secondChordSound: "", secondChordImage: #imageLiteral(resourceName: "b-chord.png"), secondChordVideoId: "B6xbJazlViE", numOfChallenge: 20, songName: "Hallelujah",singer: "Leonard Cohen", songImage: #imageLiteral(resourceName: "Hellulja.png"), songUrl: "DZCyaEU0Dnk")
+      
         
         
         //Return the array
