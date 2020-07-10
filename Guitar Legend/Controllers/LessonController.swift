@@ -54,13 +54,20 @@ class LessonController: UIViewController, UpdateApiCallBack {
         firstChordButton.setTitle(challenge.chords[0].name, for: .normal)
         secondChordButton.setTitle(challenge.chords[1].name, for: .normal)
         songNameLabel.text = "\(challenge.song.name) by \(challenge.song.singer)"
+    
+        setNextChallengeButtonVisibilty()
         
-        if(currentUser.currentChallenge == challenge.numOfChallenge){
+        
+    }
+    
+    func setNextChallengeButtonVisibilty(){
+        
+        if(currentUser.currentChallenge == challenge.numOfChallenge && currentUser.currentChallenge < Finals.MAX_CHALLENGE){
+
             nextChallengeButton.isHidden = false
         } else if(currentUser.currentChallenge > challenge.numOfChallenge || challenge.numOfChallenge == Finals.MAX_CHALLENGE){
             nextChallengeButton.isHidden = true
         }
-        
     }
     
     
